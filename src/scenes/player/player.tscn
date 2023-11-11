@@ -130,7 +130,7 @@ tracks/3/keys = {
 "values": [ 1 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Weapon/Particles2D:emitting")
+tracks/4/path = NodePath("Weapon/Muzzle_Flash:emitting")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -142,7 +142,7 @@ tracks/4/keys = {
 "values": [ true, false ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Weapon/Particles2D:amount")
+tracks/5/path = NodePath("Weapon/Muzzle_Flash:amount")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -234,7 +234,7 @@ anims/defaultak_whileinputheld = SubResource( 2 )
 
 [node name="Weapon" type="Node2D" parent="."]
 
-[node name="Particles2D" type="Particles2D" parent="Weapon"]
+[node name="Muzzle_Flash" type="Particles2D" parent="Weapon"]
 material = SubResource( 8 )
 position = Vector2( 79, 1 )
 rotation = 1.5708
