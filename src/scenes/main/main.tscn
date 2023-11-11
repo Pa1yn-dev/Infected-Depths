@@ -3,4 +3,5 @@
 [node name="Main" type="Node2D"]
 
 [node name="Floor_TileMap" type="TileMap" parent="."]
+cell_size = Vector2( 128, 128 )
 format = 1
