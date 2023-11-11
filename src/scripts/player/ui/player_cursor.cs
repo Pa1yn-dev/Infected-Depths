@@ -21,7 +21,6 @@ public partial class player_cursor : Line2D
             float lengthdelta = ((player_position + mouseposition).Length() - aimingcursor_length) - offset_playerposition;
 
             mouseposition.x -= lengthdelta;
-            
         }
 
         if(mouseposition.x < offset_playerposition)
@@ -31,13 +30,11 @@ public partial class player_cursor : Line2D
         
         AddPoint(player_position);
         AddPoint(mouseposition);
-        
     }
     
     public override void _Process(float delta)
     {
         ClearPoints();
         DrawLineToCursor();
-        
     }
 }

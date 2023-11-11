@@ -2,7 +2,7 @@ using Godot;
 using System;
 
 
-public class audiostrmplay2d : Node
+public partial class audiostrmplay2d : Node
 {
     public void PlayAudio(AudioStreamPlayer2D audioplayer, AudioStreamSample sample)
     {
