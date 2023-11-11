@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class Movement : KinematicBody2D
+public partial class Movement : KinematicBody2D
 {
     public Vector2 player_velocity = Vector2.Zero;
     public Vector2 axis_input = Vector2.Zero;
