@@ -10,7 +10,6 @@ public partial class player_cursor : Line2D
     
     public void DrawLineToCursor()
     {
-        Input.MouseMode = Input.MouseModeEnum.Hidden;
         Vector2 player_position = Position;
         Vector2 mouseposition = GetLocalMousePosition();
 

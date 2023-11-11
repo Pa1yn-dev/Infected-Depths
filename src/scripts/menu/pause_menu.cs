@@ -24,14 +24,12 @@ public partial class pause_menu : Control
         if(Input.IsActionPressed("escape"))
         {
             GetTree().Paused = true;
-            Input.MouseMode = Input.MouseModeEnum.Visible;
             pausemenu_controlnode.Show();
         }
 
         if(resume_button.ButtonPressed == true)
         {
             GetTree().Paused = false;
-            Input.MouseMode = Input.MouseModeEnum.Hidden;
             pausemenu_controlnode.Hide();
         }
 

@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Movement : CharacterBody2D
+public partial class player_movement : CharacterBody2D
 {
     public Vector2 player_velocity = Vector2.Zero;
     public Vector2 axis_input = Vector2.Zero;
@@ -28,16 +28,16 @@ public partial class Movement : CharacterBody2D
         }
 
         player_velocity = player_velocity.Lerp(axis_input, lerp_weight);
+
+        // Apply calculated player_velocity to character2d.Velocity for MoveAndSlide (Godot 4)
+        Velocity = player_velocity;
     }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
 public override void _PhysicsProcess(double delta)
   {
         GetUserInput();
-        MoveAndSlide();
     
-      //player_velocity = MoveAndSlide(player_velocity);
-      //GD.Print(player_velocity);
-      
+        MoveAndSlide();
   }
 }
