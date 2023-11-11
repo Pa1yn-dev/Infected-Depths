@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://src/scripts/player/Movement.cs" type="Script" id=1]
+[ext_resource path="res://src/sprites/weapons/ammo/export/762x39/762x39_shell.png" type="Texture" id=2]
 [ext_resource path="res://src/scripts/player/ui/player_cursor.cs" type="Script" id=3]
 [ext_resource path="res://src/sprites/weapons/export/rifles/ak/defaultak_spritesheet_300123.png" type="Texture" id=4]
 [ext_resource path="res://src/sprites/player/export/head/helmet/defaultuniformhelmet_spritesheet_300123.png" type="Texture" id=5]
@@ -97,6 +98,41 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 2, 3, 4, 3, 2 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("Weapon/Particles2D:emitting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.06 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Weapon/Particles2D:amount")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.06 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 5
+emission_ring_radius = 2.0
+emission_ring_inner_radius = 0.0
+emission_ring_height = 0.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+direction = Vector3( 0, 0, 1 )
+gravity = Vector3( 0, 1000, 100 )
+damping = 10.0
+scale = 0.1
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -129,12 +165,22 @@ anims/defaultak_whileinputheld = SubResource( 2 )
 
 [node name="Weapon" type="Node2D" parent="."]
 
+[node name="Particles2D" type="Particles2D" parent="Weapon"]
+position = Vector2( 15, 7 )
+rotation = 1.5708
+emitting = false
+amount = 800
+lifetime = 100.0
+local_coords = false
+process_material = SubResource( 5 )
+texture = ExtResource( 2 )
+
 [node name="Weapon_Sprite" type="Sprite" parent="Weapon"]
 position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 4 )
 hframes = 7
-frame = 5
+frame = 4
 
 [node name="Bullets_Raycast" type="RayCast2D" parent="Weapon"]
 cast_to = Vector2( 64, 0 )
@@ -147,7 +193,7 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 6 )
 hframes = 7
-frame = 5
+frame = 4
 
 [node name="Torso_Sprite" type="Sprite" parent="Player_Body"]
 position = Vector2( 0, -20 )
