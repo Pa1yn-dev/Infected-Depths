@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://src/scripts/player/Movement.cs" type="Script" id=1]
 [ext_resource path="res://src/sprites/weapons/ammo/export/762x39/762x39_shell.png" type="Texture" id=2]
@@ -7,6 +7,13 @@
 [ext_resource path="res://src/sprites/player/export/head/helmet/defaultuniformhelmet_spritesheet_300123.png" type="Texture" id=5]
 [ext_resource path="res://src/sprites/player/export/arms/defaultuniformarms_spritesheet_300123.png" type="Texture" id=6]
 [ext_resource path="res://src/sprites/player/export/torso/defaultuniformtorso_spritesheet_300123.png" type="Texture" id=7]
+[ext_resource path="res://src/sprites/weapons/effects/ak_firing/export/ak_firing6.png" type="Texture" id=8]
+[ext_resource path="res://src/sprites/weapons/effects/ak_firing/export/ak_firing3.png" type="Texture" id=9]
+[ext_resource path="res://src/sprites/weapons/effects/ak_firing/export/ak_firing2.png" type="Texture" id=10]
+[ext_resource path="res://src/sprites/weapons/effects/ak_firing/export/ak_firing5.png" type="Texture" id=11]
+[ext_resource path="res://src/sprites/weapons/effects/ak_firing/export/ak_firing7.png" type="Texture" id=12]
+[ext_resource path="res://src/sprites/weapons/effects/ak_firing/export/ak_firing4.png" type="Texture" id=13]
+[ext_resource path="res://src/sprites/weapons/effects/ak_firing/export/ak_firing1.png" type="Texture" id=14]
 
 [sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.0980392 )
@@ -122,6 +129,68 @@ tracks/3/keys = {
 "update": 1,
 "values": [ 1 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Weapon/Particles2D:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.13 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Weapon/Particles2D:amount")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 5
+emission_ring_radius = 2.0
+emission_ring_inner_radius = 0.0
+emission_ring_height = 1.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+flag_disable_z = true
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+hue_variation = 1.0
+anim_speed = 128.0
+
+[sub_resource type="AnimatedTexture" id=7]
+flags = 8
+frames = 7
+fps = 70.0
+frame_0/texture = ExtResource( 14 )
+frame_1/texture = ExtResource( 10 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 9 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 13 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 11 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 8 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 12 )
+frame_6/delay_sec = 0.0
 
 [sub_resource type="ParticlesMaterial" id=5]
 emission_shape = 5
@@ -145,7 +214,7 @@ polygon = PoolVector2Array( -8, -40, 8, -40, 40, 8, 48, 16, 64, 16, 64, 24, 24, 
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 0.6, 0.6 )
+zoom = Vector2( 0.4, 0.4 )
 process_mode = 0
 limit_smoothed = true
 smoothing_enabled = true
@@ -165,6 +234,17 @@ anims/defaultak_whileinputheld = SubResource( 2 )
 
 [node name="Weapon" type="Node2D" parent="."]
 
+[node name="Particles2D" type="Particles2D" parent="Weapon"]
+material = SubResource( 8 )
+position = Vector2( 79, 1 )
+rotation = 1.5708
+emitting = false
+amount = 1
+lifetime = 0.01
+one_shot = true
+process_material = SubResource( 6 )
+texture = SubResource( 7 )
+
 [node name="Shell_Ejection" type="Particles2D" parent="Weapon"]
 position = Vector2( 15, 7 )
 rotation = 1.5708
@@ -179,7 +259,7 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 4 )
 hframes = 7
-frame = 4
+frame = 2
 
 [node name="Bullets_Raycast" type="RayCast2D" parent="Weapon"]
 cast_to = Vector2( 64, 0 )
@@ -192,7 +272,7 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 6 )
 hframes = 7
-frame = 4
+frame = 2
 
 [node name="Torso_Sprite" type="Sprite" parent="Player_Body"]
 position = Vector2( 0, -20 )

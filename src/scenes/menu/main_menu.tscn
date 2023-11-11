@@ -121,6 +121,6 @@ margin_bottom = 354.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/font = SubResource( 3 )
-text = "V0.01"
+text = "Pre-Alpha ©Pa1yn"
 align = 1
 valign = 2
