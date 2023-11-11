@@ -6,10 +6,6 @@ public class settings_menu : Control
     private Control settingsmenu_controlnode;
     private HSlider masteraudiovol_slider;
     private HSlider musicvol_slider;
-
-    private int masterbus;
-    private int musicbus;
-    private int sfxbus;
     private HSlider sfxvol_slider;
     private Button save_button;
     private Button close_button;
@@ -21,10 +17,11 @@ public class settings_menu : Control
         musicvol_slider = GetNode<HSlider>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Music_Audio_Level/HSlider");
         sfxvol_slider = GetNode<HSlider>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/SFX_Audio_Level/HSlider");
 
-        masterbus = AudioServer.GetBusIndex("Master");
-        musicbus = AudioServer.GetBusIndex("Music");
-        sfxbus = AudioServer.GetBusIndex("SFX");
-
+        var audiobusmanager = new audiobusmanager();
+        masteraudiovol_slider.Value = audiobusmanager.GetDefaultBusVolume("Master");
+        musicvol_slider.Value = audiobusmanager.GetDefaultBusVolume("Music");
+        sfxvol_slider.Value = audiobusmanager.GetDefaultBusVolume("SFX");
+        
         save_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer/HSplitContainer/Save");
         close_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer/HSplitContainer/Close");
     }
@@ -44,10 +41,10 @@ public class settings_menu : Control
 
     public void ProcessUserInteraction()
     {
-        AudioServer.SetBusVolumeDb(masterbus, (float)masteraudiovol_slider.Value);
-        AudioServer.SetBusVolumeDb(musicbus, (float)musicvol_slider.Value);
-        AudioServer.SetBusVolumeDb(sfxbus, (float)sfxvol_slider.Value);
-
+        var audiobusmanager = new audiobusmanager();
+        audiobusmanager.ChangeBusVolume("Master", (float)masteraudiovol_slider.Value);
+        audiobusmanager.ChangeBusVolume("Music", (float)musicvol_slider.Value);
+        audiobusmanager.ChangeBusVolume("SFX", (float)sfxvol_slider.Value);
     }
 
     public override void _Process(float delta)
