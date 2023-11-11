@@ -5,7 +5,7 @@
 [ext_resource path="res://src/fonts/pressstart2p/PressStart2P-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://src/shaders/dropshadow.shader" type="Shader" id=4]
 [ext_resource path="res://src/scenes/menu/settings_menu.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/misc/splash-screen/test/Dark cavern-export.png" type="Texture" id=6]
+[ext_resource path="res://src/misc/theme-art/export/Theme_Art_02-export.png" type="Texture" id=6]
 
 [sub_resource type="ShaderMaterial" id=4]
 shader = ExtResource( 4 )

@@ -247,7 +247,7 @@ tracks/6/keys = {
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
-"method": "call_audiostrmplay2d"
+"method": "call_audiostrmplay2d_gunfiresfx"
 } ]
 }
 
@@ -336,6 +336,7 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 10 )
 hframes = 7
+frame = 2
 
 [node name="Bullets_Raycast" type="RayCast2D" parent="."]
 cast_to = Vector2( 64, 0 )
@@ -346,3 +347,4 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 3 )
 hframes = 7
+frame = 2

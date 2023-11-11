@@ -12,6 +12,10 @@ config_version=4
 
 config/name="Infected Depths"
 run/main_scene="res://src/scenes/menu/main_menu.tscn"
+boot_splash/image="res://src/sprites/menu/export/title/export/title.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
