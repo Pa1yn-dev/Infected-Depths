@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Lookdown"
-run/main_scene="res://src/scenes/misc components/player.tscn"
+run/main_scene="res://src/scenes/main/main.tscn"
 config/icon="res://icon.png"
 
 [display]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_head_test.png-87a6364c2931a11df35f9082e1348bcf.stex"
+path="res://.import/player_weapon_ak.png-80676e4d63a2a7efbd0b6d8a64ceae41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/sprites/player/raw/player_head_test.png"
-dest_files=[ "res://.import/player_head_test.png-87a6364c2931a11df35f9082e1348bcf.stex" ]
+source_file="res://src/sprites/player/export/player_weapon_ak.png"
+dest_files=[ "res://.import/player_weapon_ak.png-80676e4d63a2a7efbd0b6d8a64ceae41.stex" ]
 
 [params]
 
