@@ -8,6 +8,8 @@ public class main_menu : Control
     private Button credits_button;
     private Button exit_button;
 
+    private CanvasLayer load_scenetransition;
+
     public override void _Ready()
     {
         play_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2/Play");
@@ -15,14 +17,17 @@ public class main_menu : Control
         credits_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2/Credits");
         exit_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2/Exit");
 
+        load_scenetransition = GetNode<CanvasLayer>("/root/LoadingScreen");
+
+
+
     }
 
     public void GetUserInput()
     {
         if(play_button.Pressed == true)
         {
-            new loading_scrn().SceneTransition();
-
+            load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main.tscn");
         }
 
     }

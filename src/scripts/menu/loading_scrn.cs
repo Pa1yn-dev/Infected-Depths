@@ -3,41 +3,24 @@ using System;
 
 public class loading_scrn : CanvasLayer
 {
-   
-
-    private string target = "res://src/scenes/main/main.tscn";
+    private string target;
     private AnimationPlayer loadingscrn_animationplyr;
 
-    public override void _Ready()
+    public void SceneTransition(string input)
     {
+      this.target = input;
       this.loadingscrn_animationplyr = GetNode<AnimationPlayer>("AnimationPlayer");
+      this.loadingscrn_animationplyr.Play("dissolve");
       
-      
-
     }
-    public void SceneTransition()
+
+    public void Scene_load()
     {
-      GD.Print(loadingscrn_animationplyr);
-      loadingscrn_animationplyr.Play("dissolve");
-      loadingscrn_animationplyr.PlayBackwards("dissolve");
-
-        
-      //loadingscrn_animationplyr.Connect("animation_finished", loadingscrn_animationplyr, "" );
-      //GetTree().ChangeScene(target);
-      //loadingscrn_animationplyr.Play("dissolve_backwards");
-
+      //Called from Animation player, end of dissolve track.
+      GetTree().ChangeScene(this.target);
+      this.loadingscrn_animationplyr.PlayBackwards("dissolve");
     }
       
-      public override void _Process(float delta)
-    {
-        SceneTransition();
-      
-    }
-
-
-    
-
-
      
      
 
