@@ -1,0 +1,9 @@
+/home/kitt/Documents/Godot/LookDown/.mono/temp/bin/ExportDebug/Lookdown.dll
+/home/kitt/Documents/Godot/LookDown/.mono/temp/bin/ExportDebug/Lookdown.pdb
+/home/kitt/Documents/Godot/LookDown/.mono/temp/obj/ExportDebug/Lookdown.csproj.AssemblyReference.cache
+/home/kitt/Documents/Godot/LookDown/.mono/temp/obj/ExportDebug/Lookdown.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitt/Documents/Godot/LookDown/.mono/temp/obj/ExportDebug/Lookdown.AssemblyInfoInputs.cache
+/home/kitt/Documents/Godot/LookDown/.mono/temp/obj/ExportDebug/Lookdown.AssemblyInfo.cs
+/home/kitt/Documents/Godot/LookDown/.mono/temp/obj/ExportDebug/Lookdown.csproj.CoreCompileInputs.cache
+/home/kitt/Documents/Godot/LookDown/.mono/temp/obj/ExportDebug/Lookdown.dll
+/home/kitt/Documents/Godot/LookDown/.mono/temp/obj/ExportDebug/Lookdown.pdb
