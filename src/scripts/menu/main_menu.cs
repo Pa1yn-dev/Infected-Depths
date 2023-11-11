@@ -41,32 +41,34 @@ public class main_menu : Control
         
         if(play_button.IsHovered() == true)
         {
-
+            
         }
 
-        else if(play_button.Pressed == true)
+        if(play_button.Pressed == true)
         { 
             load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main.tscn");
             audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");
         }
+
 
         if(settings_button.IsHovered() == true)
         {
 
         }
 
-        else if(settings_button.Pressed == true)
+        if(settings_button.Pressed == true)
         {
             settingsmenu_node.Show();
             audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");   
         }
+
         
         if(exit_button.IsHovered() == true)
         {
 
         }
 
-        else if(exit_button.Pressed == true)
+        if(exit_button.Pressed == true)
         {
             audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");
             GetTree().Quit(0);
