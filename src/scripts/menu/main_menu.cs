@@ -10,6 +10,8 @@ public class main_menu : Control
 
     private CanvasLayer load_scenetransition;
 
+    private AnimationPlayer menu_animationplayer;
+
     public override void _Ready()
     {
         play_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2/Play");
@@ -19,8 +21,7 @@ public class main_menu : Control
 
         load_scenetransition = GetNode<CanvasLayer>("/root/LoadingScreen");
 
-
-
+        menu_animationplayer = GetNode<AnimationPlayer>("Menu_AnimationPlayer");
     }
 
     public void GetUserInput()
@@ -32,10 +33,16 @@ public class main_menu : Control
 
     }
 
+    public void MenuAnimations()
+    {
+        menu_animationplayer.Play("title_movement");
+    }
+
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
         GetUserInput();
+        MenuAnimations();
       
     }
 }
