@@ -41,7 +41,7 @@ public class weapon_ak : Node2D
     {
         //Called from animation "defaultak_whileinputheld"
         var audiostrmplay2d = new audiostrmplay2d();
-        audiostrmplay2d.PlayAudio(parent_node, sample, "Gunfire"); 
+        audiostrmplay2d.PlayAudio(parent_node, sample, "SFX"); 
     }
 
     public override void _Process(float delta)

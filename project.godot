@@ -16,7 +16,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-LoadingScreen="*res://src/scenes/menu/loading_screen.tscn"
+LoadingScreen="*res://src/scenes/menu/misc/loading_screen.tscn"
 
 [display]
 

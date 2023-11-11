@@ -12,6 +12,8 @@ public class main_menu : Control
 
     private AnimationPlayer menu_animationplayer;
 
+    private Control settingsmenu_node;
+
     public override void _Ready()
     {
         play_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2/Play");
@@ -22,6 +24,9 @@ public class main_menu : Control
         load_scenetransition = GetNode<CanvasLayer>("/root/LoadingScreen");
 
         menu_animationplayer = GetNode<AnimationPlayer>("Menu_AnimationPlayer");
+
+        settingsmenu_node = GetNode<Control>("Sub_Menus/Settings_Menu");
+        settingsmenu_node.Hide();
     }
 
     public void GetUserInput()
@@ -29,6 +34,12 @@ public class main_menu : Control
         if(play_button.Pressed == true)
         {
             load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main.tscn");
+        }
+
+        if(settings_button.Pressed == true)
+        {
+            settingsmenu_node.Show();
+
         }
 
     }
