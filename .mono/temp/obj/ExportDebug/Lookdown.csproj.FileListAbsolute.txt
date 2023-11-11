@@ -16,3 +16,12 @@
 /home/kitt/Documents/GitHub/LookDown/.mono/temp/obj/ExportDebug/Lookdown.csproj.CoreCompileInputs.cache
 /home/kitt/Documents/GitHub/LookDown/.mono/temp/obj/ExportDebug/Lookdown.dll
 /home/kitt/Documents/GitHub/LookDown/.mono/temp/obj/ExportDebug/Lookdown.pdb
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/bin/ExportDebug/Lookdown.dll
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/bin/ExportDebug/Lookdown.pdb
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/obj/ExportDebug/Lookdown.csproj.AssemblyReference.cache
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/obj/ExportDebug/Lookdown.GeneratedMSBuildEditorConfig.editorconfig
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/obj/ExportDebug/Lookdown.AssemblyInfoInputs.cache
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/obj/ExportDebug/Lookdown.AssemblyInfo.cs
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/obj/ExportDebug/Lookdown.csproj.CoreCompileInputs.cache
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/obj/ExportDebug/Lookdown.dll
+/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/obj/ExportDebug/Lookdown.pdb

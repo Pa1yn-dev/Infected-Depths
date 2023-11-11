@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kitt/Documents/GitHub/LookDown/Lookdown.csproj": {}
+    "/home/kitt/Documents/GitHub/Infected-Depths/Lookdown.csproj": {}
   },
   "projects": {
-    "/home/kitt/Documents/GitHub/LookDown/Lookdown.csproj": {
+    "/home/kitt/Documents/GitHub/Infected-Depths/Lookdown.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kitt/Documents/GitHub/LookDown/Lookdown.csproj",
+        "projectUniqueName": "/home/kitt/Documents/GitHub/Infected-Depths/Lookdown.csproj",
         "projectName": "Lookdown",
-        "projectPath": "/home/kitt/Documents/GitHub/LookDown/Lookdown.csproj",
+        "projectPath": "/home/kitt/Documents/GitHub/Infected-Depths/Lookdown.csproj",
         "packagesPath": "/home/kitt/.nuget/packages/",
-        "outputPath": "/home/kitt/Documents/GitHub/LookDown/.mono/temp/obj/",
+        "outputPath": "/home/kitt/Documents/GitHub/Infected-Depths/.mono/temp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kitt/.nuget/NuGet/NuGet.Config"

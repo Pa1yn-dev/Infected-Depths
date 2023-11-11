@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hj2EimVUFFUjpmexhQvVHrt2qQhNABTMA8kQENlcI4F1hgaskhCfiG5GhlPa1T57HezCb2u5XIzzs3U0zTqFCg==",
+  "dgSpecHash": "QVZGLvGYmMsZHIx/q13PFmTkRiaCnK8W2CjYiEfeyQZN/hEJlkjiKj3P0smU0msHy1Qs33IQFBYDjkec7AD+og==",
   "success": true,
-  "projectFilePath": "/home/kitt/Documents/GitHub/LookDown/Lookdown.csproj",
+  "projectFilePath": "/home/kitt/Documents/GitHub/Infected-Depths/Lookdown.csproj",
   "expectedPackageFiles": [
     "/home/kitt/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.2/microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
     "/home/kitt/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.2/microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
