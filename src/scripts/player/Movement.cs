@@ -32,17 +32,12 @@ public class Movement : KinematicBody2D
             //player_velocity.x += 1;
             player_velocity.x = Math.Min(player_velocity.x + player_vacceleration, player_vhipmagnitude);
         }
-        else if (!Input.IsActionPressed("right"))
-        {
-            player_velocity.x = Lerp(player_velocity.x, 0, lerp_weight);
-        }
-          
         if (Input.IsActionPressed("left"))
         {
             //player_velocity.x -= 1;
             player_velocity.x = Math.Max(player_velocity.x - player_vacceleration, -player_vhipmagnitude);
         }
-        else if (!Input.IsActionPressed("left"))
+        else if (!Input.IsActionPressed("left") & !Input.IsActionPressed("right"))
         {
             
             player_velocity.x = Lerp(player_velocity.x, 0, lerp_weight);
@@ -55,10 +50,6 @@ public class Movement : KinematicBody2D
             player_velocity.y = Math.Max(player_velocity.y - player_vacceleration, -player_vhipmagnitude);
             
         }
-        else if (!Input.IsActionPressed("up"))
-        {
-            player_velocity.y = Lerp(player_velocity.y, 0, lerp_weight);
-        }
             
         if (Input.IsActionPressed("down"))
         {
@@ -66,7 +57,7 @@ public class Movement : KinematicBody2D
             player_velocity.y = Math.Min(player_velocity.y + player_vacceleration, player_vhipmagnitude);
             
         }
-        else if (!Input.IsActionPressed("down"))
+        else if (!Input.IsActionPressed("down") & !Input.IsActionPressed("up"))
         {
             player_velocity.y = Lerp(player_velocity.y, 0, lerp_weight);
         }
@@ -74,12 +65,12 @@ public class Movement : KinematicBody2D
         // ADS
         if (Input.IsActionPressed("right_click"))
         {
-            player_velocity = player_velocity.Normalized() * player_vadsmagnitude;
+            player_velocity = player_velocity * player_vadsmagnitude;
         }
  
         else
         {   
-            player_velocity = player_velocity.Normalized() * player_vhipmagnitude;
+            player_velocity = player_velocity * player_vhipmagnitude;
         }
             
         
