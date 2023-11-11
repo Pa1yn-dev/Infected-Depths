@@ -1,7 +1,9 @@
 res://default_bus_layout.tres
 res://default_env.tres
+res://src/scenes/player/player.tscn
 res://src/scenes/menu/main_menu.tscn
 res://src/scenes/main/main_test.tscn
 res://src/scenes/main/main.tscn
-res://src/scenes/player/player.tscn
 res://src/scenes/weapons/rifles/weapon_ak.tscn
+res://src/scenes/menu/pause_menu.tscn
+res://src/scenes/menu/misc/loading_screen.tscn

@@ -14,6 +14,13 @@ public partial class loading_screen : CanvasLayer
 
       await ToSignal(this.loadingscrn_animationplyr, "animation_finished");
       GetTree().ChangeSceneToFile(this.target);
+
+      if(GetTree().Paused == true)
+      {
+        GetTree().Paused = false;
+      }
+      
+
       this.loadingscrn_animationplyr.PlayBackwards("dissolve");
       
     } 

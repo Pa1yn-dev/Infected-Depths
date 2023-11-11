@@ -1,90 +1,98 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://bjadm2gau54b7"]
 
-[ext_resource path="res://src/shaders/menu_blur.tres" type="Shader" id=1]
-[ext_resource path="res://src/fonts/pressstart2p/PressStart2P-Regular.ttf" type="FontFile" id=2]
-[ext_resource path="res://src/scripts/menu/pause_menu.cs" type="Script" id=3]
+[ext_resource type="Shader" uid="uid://dg7tq4xfn4vkm" path="res://src/shaders/menu_blur.tres" id="1"]
+[ext_resource type="FontFile" uid="uid://b3562mk8v2a2u" path="res://src/fonts/pressstart2p/PressStart2P-Regular.ttf" id="2"]
+[ext_resource type="Script" path="res://src/scripts/menu/pause_menu.cs" id="3"]
 
-[sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 1 )
-shader_param/blur_amount = 2.0
-shader_param/mix_amount = 0.0
-shader_param/color_over = null
+[sub_resource type="ShaderMaterial" id="2"]
+shader = ExtResource("1")
+shader_parameter/blur_amount = 2.0
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = null
 
-[sub_resource type="FontFile" id=3]
-size = 40
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="3"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("2"), ExtResource("2")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id=4]
-size = 40
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="4"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+fallbacks = Array[Font]([ExtResource("2"), ExtResource("2")])
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Pause_Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer"]
-material = SubResource( 2 )
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color( 0, 0, 0, 0.392157 )
+material = SubResource("2")
+layout_mode = 2
+color = Color(0, 0, 0, 0.392157)
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
-offset_right = 1920.0
-offset_bottom = 1080.0
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
-offset_left = 794.0
-offset_top = 421.0
-offset_right = 1126.0
-offset_bottom = 659.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer"]
-offset_right = 332.0
-offset_bottom = 238.0
+layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 50
 
 [node name="Resume" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
-offset_right = 332.0
-offset_bottom = 46.0
+layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_hover_color = Color( 0, 0, 0, 0.282353 )
-theme_override_fonts/font = SubResource( 3 )
-focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
+theme_override_fonts/font = SubResource("3")
 text = "Resume"
 flat = true
 icon_alignment = 1
 
 [node name="Settings" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
-offset_top = 96.0
-offset_right = 332.0
-offset_bottom = 142.0
+layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_hover_color = Color( 0, 0, 0, 0.282353 )
-theme_override_fonts/font = SubResource( 4 )
-focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
+theme_override_fonts/font = SubResource("4")
 text = "Settings"
 flat = true
 icon_alignment = 1
 
 [node name="Exit" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
-offset_top = 192.0
-offset_right = 332.0
-offset_bottom = 238.0
+layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_hover_color = Color( 0, 0, 0, 0.282353 )
-theme_override_fonts/font = SubResource( 4 )
-focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
+theme_override_fonts/font = SubResource("4")
 text = "Exit"
 flat = true
 icon_alignment = 1

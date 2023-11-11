@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://clt0nwvy61cm3" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01_Nborder.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bluwjkdhg5mqw" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01_Cborder.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dvjq8aokdeelj" path="res://src/textures/main/walls/export/concrete-wall_01/concrete-wall_01_ssection.png" id="6"]
-[ext_resource type="PackedScene" path="res://src/scenes/menu/pause_menu.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://bjadm2gau54b7" path="res://src/scenes/menu/pause_menu.tscn" id="7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pv4wl"]
 texture = ExtResource("1")
@@ -188,7 +188,6 @@ layer_0/tile_data = PackedInt32Array(10, 0, 393216, 65546, 0, 393216, 131082, 0,
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("7")]
-layout_mode = 3
-anchors_preset = 15
+visible = false
 grow_horizontal = 2
 grow_vertical = 2

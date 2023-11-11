@@ -21,8 +21,17 @@ public partial class pause_menu : Control
 
     public void GetUserInput()
     {
+        if(Input.IsActionPressed("escape"))
+        {
+            GetTree().Paused = true;
+            Input.MouseMode = Input.MouseModeEnum.Visible;
+            pausemenu_controlnode.Show();
+        }
+
         if(resume_button.ButtonPressed == true)
         {
+            GetTree().Paused = false;
+            Input.MouseMode = Input.MouseModeEnum.Hidden;
             pausemenu_controlnode.Hide();
         }
 
@@ -33,7 +42,9 @@ public partial class pause_menu : Control
 
         if(exit_button.ButtonPressed == true)
         {
+            
             load_scenetransition.Call("SceneTransition", "res://src/scenes/menu/main_menu.tscn");
+            
         }
     }
 
