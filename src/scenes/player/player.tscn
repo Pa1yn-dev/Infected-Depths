@@ -12,7 +12,7 @@ script = ExtResource( 1 )
 player_vhipvelocity = 425.0
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="."]
-visible = false
+position = Vector2( 0, -20 )
 polygon = PoolVector2Array( -8, -40, 8, -40, 40, 8, 48, 16, 64, 16, 64, 24, 24, 32, -8, 32, -24, 40, -40, 40, -56, 32, -64, 24, -64, -8, -56, -16, -24, -32, -16, -32 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -27,15 +27,13 @@ process_mode = 0
 limit_smoothed = true
 smoothing_enabled = true
 
-[node name="LineCursor" type="Line2D" parent="."]
+[node name="PlayerCursor" type="Line2D" parent="."]
 width = 5.0
 default_color = Color( 1, 1, 1, 0.0980392 )
 gradient = SubResource( 1 )
 end_cap_mode = 2
 antialiased = true
 script = ExtResource( 3 )
-aimingcursor_length = 300.0
-offset_playerposition = 80.0
 
 [node name="Weapon" type="Node2D" parent="."]
 

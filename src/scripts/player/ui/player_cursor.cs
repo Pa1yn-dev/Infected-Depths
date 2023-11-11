@@ -4,9 +4,9 @@ using System;
 
 public partial class player_cursor : Line2D
 {
-    [Export] public float aimingcursor_length = 50f;
+    [Export] public float aimingcursor_length = 300f;
 
-    [Export] public float offset_playerposition = 50f;
+    [Export] public float offset_playerposition = 80f;
     
     public void DrawLineToCursor()
     {
