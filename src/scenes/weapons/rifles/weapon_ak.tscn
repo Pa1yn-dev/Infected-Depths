@@ -63,7 +63,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 1 ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Weapon_AK/Muzzle_Flash:emitting")
@@ -87,7 +87,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ 0 ]
+"values": [ 1 ]
 }
 tracks/6/type = "method"
 tracks/6/path = NodePath("Weapon_AK")
@@ -336,7 +336,6 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 10 )
 hframes = 7
-frame = 2
 
 [node name="Bullets_Raycast" type="RayCast2D" parent="."]
 cast_to = Vector2( 64, 0 )
@@ -347,4 +346,3 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 3 )
 hframes = 7
-frame = 2
