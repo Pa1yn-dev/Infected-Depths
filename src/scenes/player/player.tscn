@@ -168,8 +168,7 @@ anims/defaultak_whileinputheld = SubResource( 2 )
 [node name="Shell_Ejection" type="Particles2D" parent="Weapon"]
 position = Vector2( 15, 7 )
 rotation = 1.5708
-emitting = false
-amount = 800
+amount = 1
 lifetime = 100.0
 local_coords = false
 process_material = SubResource( 5 )
@@ -180,7 +179,6 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 4 )
 hframes = 7
-frame = 4
 
 [node name="Bullets_Raycast" type="RayCast2D" parent="Weapon"]
 cast_to = Vector2( 64, 0 )
@@ -193,7 +191,6 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 6 )
 hframes = 7
-frame = 4
 
 [node name="Torso_Sprite" type="Sprite" parent="Player_Body"]
 position = Vector2( 0, -20 )
