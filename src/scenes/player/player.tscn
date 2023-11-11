@@ -99,7 +99,7 @@ tracks/1/keys = {
 "values": [ 2, 3, 4, 3, 2 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Weapon/Particles2D:emitting")
+tracks/2/path = NodePath("Weapon/Shell_Ejection:emitting")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -111,7 +111,7 @@ tracks/2/keys = {
 "values": [ true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Weapon/Particles2D:amount")
+tracks/3/path = NodePath("Weapon/Shell_Ejection:amount")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -165,7 +165,7 @@ anims/defaultak_whileinputheld = SubResource( 2 )
 
 [node name="Weapon" type="Node2D" parent="."]
 
-[node name="Particles2D" type="Particles2D" parent="Weapon"]
+[node name="Shell_Ejection" type="Particles2D" parent="Weapon"]
 position = Vector2( 15, 7 )
 rotation = 1.5708
 emitting = false
