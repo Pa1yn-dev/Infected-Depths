@@ -14,7 +14,5 @@ public partial class audiostrmplay : Node
         input_parent_node.AddChild(this.audioplayer);
 
         this.audioplayer.Play();
-    }
-
-    
+    }   
 }

@@ -14,6 +14,9 @@ public class main_menu : Control
 
     private Control settingsmenu_node;
 
+    private AudioStreamSample sample_menubuttonsfx;
+    private Control parent_node;
+
     public override void _Ready()
     {
         play_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2/Play");
@@ -27,33 +30,47 @@ public class main_menu : Control
 
         settingsmenu_node = GetNode<Control>("Sub_Menus/Settings_Menu");
         settingsmenu_node.Hide();
+
+        sample_menubuttonsfx = (AudioStreamSample)GD.Load("res://src/audio/sfx/main_menu/menubuttonclick_01.wav");
+        parent_node = GetNode<Control>(".");
     }
 
     public void GetUserInput()
     {
+        var audiostrmplay = new audiostrmplay();
+        
         if(play_button.Pressed == true)
         {
+            
             load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main.tscn");
+            audiostrmplay.PlayAudio(parent_node, sample_menubuttonsfx, "SFX");
+
         }
 
         if(settings_button.Pressed == true)
         {
             settingsmenu_node.Show();
+            audiostrmplay.PlayAudio(parent_node, sample_menubuttonsfx, "SFX");
+            
+        }
 
+        if(exit_button.Pressed == true)
+        {
+            audiostrmplay.PlayAudio(parent_node, sample_menubuttonsfx, "SFX");
+            GetTree().Quit(0);
         }
 
     }
 
-    public void MenuAnimations()
-    {
-        menu_animationplayer.Play("title_movement");
-    }
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
+        menu_animationplayer.Play("title_movement");
+    }
+
+    public override void _Input(InputEvent @event)
+    {
         GetUserInput();
-        MenuAnimations();
-      
     }
 }

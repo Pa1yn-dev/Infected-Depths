@@ -5,7 +5,6 @@ public class weapon_ak : Node2D
 {
     private AnimationPlayer weapon_animationplayer;
     private AudioStreamSample sample_gunfiresfx;
-    private AudioStreamPlayer2D audioplayer;
     private Node2D parent_node;
 
     public override void _Ready()
