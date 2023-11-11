@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/shaders/menu_blur.tres" type="Shader" id=1]
+[ext_resource path="res://src/fonts/pressstart2p/PressStart2P-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://src/scripts/menu/pause_menu.cs" type="Script" id=3]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 1 )
+shader_param/blur_amount = 2.0
+shader_param/mix_amount = 0.0
+shader_param/color_over = null
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="Pause_Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+material = SubResource( 2 )
+margin_right = 1920.0
+margin_bottom = 1080.0
+color = Color( 0, 0, 0, 0.392157 )
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
+margin_left = 794.0
+margin_top = 421.0
+margin_right = 1126.0
+margin_bottom = 659.0
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer"]
+margin_right = 332.0
+margin_bottom = 238.0
+size_flags_horizontal = 3
+custom_constants/separation = 50
+
+[node name="Resume" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
+margin_right = 332.0
+margin_bottom = 46.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0, 0, 0, 0.282353 )
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "Resume"
+flat = true
+icon_align = 1
+
+[node name="Settings" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 332.0
+margin_bottom = 142.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0, 0, 0, 0.282353 )
+custom_fonts/font = SubResource( 4 )
+enabled_focus_mode = 0
+text = "Settings"
+flat = true
+icon_align = 1
+
+[node name="Exit" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
+margin_top = 192.0
+margin_right = 332.0
+margin_bottom = 238.0
+focus_mode = 0
+custom_colors/font_color_hover = Color( 0, 0, 0, 0.282353 )
+custom_fonts/font = SubResource( 4 )
+enabled_focus_mode = 0
+text = "Exit"
+flat = true
+icon_align = 1
