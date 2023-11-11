@@ -1,13 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://33gp4tvt0k2i"]
+[gd_scene load_steps=15 format=3 uid="uid://33gp4tvt0k2i"]
 
 [ext_resource type="Texture2D" uid="uid://b3romq7x6blc7" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01.png" id="1"]
-[ext_resource type="PackedScene" path="res://src/scenes/player/player.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ckt4w46ot40ex" path="res://src/scenes/player/player.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://bvbuvfdq4i8k1" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01_Sborder.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://clt0nwvy61cm3" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01_Nborder.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bluwjkdhg5mqw" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01_Cborder.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dvjq8aokdeelj" path="res://src/textures/main/walls/export/concrete-wall_01/concrete-wall_01_ssection.png" id="6"]
 [ext_resource type="PackedScene" uid="uid://bjadm2gau54b7" path="res://src/scenes/menu/pause_menu.tscn" id="7"]
-[ext_resource type="Script" path="res://src/scripts/player/player_movement.cs" id="7_1h12m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pv4wl"]
 texture = ExtResource("1")
@@ -185,7 +184,6 @@ format = 2
 layer_0/tile_data = PackedInt32Array(10, 0, 393216, 65546, 0, 393216, 131082, 0, 393216, 196618, 0, 393216, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 327690, 0, 393216, 393226, 0, 393216, 458762, 0, 393216, 524298, 0, 393216, 589834, 0, 393216, 655370, 0, 393216, 720906, 0, 393216, 786442, 0, 393216, 851978, 0, 393216, 917514, 0, 393216)
 
 [node name="Player" parent="." instance=ExtResource("2")]
-script = ExtResource("7_1h12m")
 player_vhipvelocity = 250.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

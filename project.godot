@@ -17,6 +17,7 @@ boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://src/misc/splash-screen/export/spashscreen-01.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
+boot_splash/minimum_display_time=1000
 
 [autoload]
 
@@ -26,6 +27,7 @@ LoadingScreen="*res://src/scenes/menu/misc/loading_screen.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 
 [dotnet]
 
@@ -91,6 +93,8 @@ project/assembly_name="Infected-Depths"
 
 [physics]
 
+2d/run_on_separate_thread=true
+common/physics_ticks_per_second=240
 common/enable_pause_aware_picking=true
 
 [rendering]

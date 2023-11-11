@@ -1,14 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "WlvpCYZEdRS4O/5iVdUIUFR4BMy2GsFXEB5LkaC7wqrrOnMjVFDs6vuWTZms+GZoKq4JcFU9ONHgKt4BQouNkw==",
+  "dgSpecHash": "aQ0wTddxM+NDFzDPEQBLZ9/hRI8z/DTA6P7YFKTW8ldt/Ph0xWxwAhB3YGsA2K5GO0GFenM890tGE7wpiGiLHQ==",
   "success": true,
-  "projectFilePath": "/home/kitt/Documents/GitHub/Infected-Depths/Infected-Depths.csproj",
+  "projectFilePath": "C:\\Users\\peter\\Documents\\GitHub\\Infected-Depths\\Infected-Depths.csproj",
   "expectedPackageFiles": [
-    "/home/kitt/.local/share/godot/mono/GodotNuGetFallbackFolder/godot.sourcegenerators/4.0.2/godot.sourcegenerators.4.0.2.nupkg.sha512",
-    "/home/kitt/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharp/4.0.2/godotsharp.4.0.2.nupkg.sha512",
-    "/home/kitt/.local/share/godot/mono/GodotNuGetFallbackFolder/godotsharpeditor/4.0.2/godotsharpeditor.4.0.2.nupkg.sha512",
-    "/home/kitt/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512",
-    "/home/kitt/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512"
+    "C:\\Users\\peter\\.nuget\\packages\\godot.sourcegenerators\\4.0.2\\godot.sourcegenerators.4.0.2.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\godotsharp\\4.0.2\\godotsharp.4.0.2.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\godotsharpeditor\\4.0.2\\godotsharpeditor.4.0.2.nupkg.sha512"
   ],
   "logs": []
 }

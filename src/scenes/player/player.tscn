@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://ckt4w46ot40ex"]
 
 [ext_resource type="Script" path="res://src/scripts/player/player_movement.cs" id="1"]
 [ext_resource type="PackedScene" uid="uid://diha07405eke0" path="res://src/scenes/weapons/rifles/weapon_ak.tscn" id="2"]
