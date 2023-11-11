@@ -46,7 +46,7 @@ public class main_menu : Control
 
         if(play_button.Pressed == true)
         { 
-            load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main.tscn");
+            load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main_test.tscn");
             audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");
         }
 
