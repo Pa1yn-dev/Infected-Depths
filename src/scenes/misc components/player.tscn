@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/scripts/player/Movement.cs" type="Script" id=1]
-[ext_resource path="res://src/sprites/player/raw/player.png" type="Texture" id=2]
+[ext_resource path="res://src/sprites/player/raw/player_weapon.png" type="Texture" id=2]
 
 [node name="Player_Body" type="KinematicBody2D"]
 script = ExtResource( 1 )

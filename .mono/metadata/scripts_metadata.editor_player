@@ -1,1 +1,1 @@
-{"res://src/scripts/player/Movement.cs":{"modified_time":"1674148275","class":{"namespace":"","class_name":"Movement","nested":false}},"res://src/scripts/player/Head_Movement.cs":{"modified_time":"1674148954","class":{"namespace":"","class_name":"Head_Movement","nested":false}}}
+{"res://src/scripts/player/Head_Movement.cs":{"modified_time":"1674148954","class":{"namespace":"","class_name":"Head_Movement","nested":false}},"res://src/scripts/player/Movement.cs":{"modified_time":"1674169374","class":{"namespace":"","class_name":"Movement","nested":false}}}

@@ -22,7 +22,6 @@ public partial class Movement : KinematicBody2D
         if(!Input.IsActionPressed("right_click"))
         {
             axis_input = axis_input.Normalized() * player_vhipvelocity;
-
         }
         else
         {
