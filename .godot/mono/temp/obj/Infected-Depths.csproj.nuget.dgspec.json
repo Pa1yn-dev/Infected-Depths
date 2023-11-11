@@ -1,34 +1,29 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\peter\\Documents\\GitHub\\Infected-Depths\\Infected-Depths.csproj": {}
+    "/home/kitt/Documents/GitHub/Infected-Depths/Infected-Depths.csproj": {}
   },
   "projects": {
-    "C:\\Users\\peter\\Documents\\GitHub\\Infected-Depths\\Infected-Depths.csproj": {
+    "/home/kitt/Documents/GitHub/Infected-Depths/Infected-Depths.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\peter\\Documents\\GitHub\\Infected-Depths\\Infected-Depths.csproj",
+        "projectUniqueName": "/home/kitt/Documents/GitHub/Infected-Depths/Infected-Depths.csproj",
         "projectName": "Infected-Depths",
-        "projectPath": "C:\\Users\\peter\\Documents\\GitHub\\Infected-Depths\\Infected-Depths.csproj",
-        "packagesPath": "C:\\Users\\peter\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\peter\\Documents\\GitHub\\Infected-Depths\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "/home/kitt/Documents/GitHub/Infected-Depths/Infected-Depths.csproj",
+        "packagesPath": "/home/kitt/.nuget/packages/",
+        "outputPath": "/home/kitt/Documents/GitHub/Infected-Depths/.godot/mono/temp/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Users\\peter\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "/home/kitt/.local/share/godot/mono/GodotNuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Users\\peter\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/kitt/.nuget/NuGet/NuGet.Config",
+          "/home/kitt/.nuget/NuGet/config/Godot.Offline.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,12 +66,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.11, 6.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

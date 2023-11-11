@@ -1,8 +1,7 @@
 res://default_bus_layout.tres
 res://default_env.tres
 res://src/scenes/menu/main_menu.tscn
-res://src/shaders/menu_blur.tres
 res://src/scenes/main/main_test.tscn
 res://src/scenes/main/main.tscn
-res://src/scenes/weapons/rifles/weapon_ak.tscn
 res://src/scenes/player/player.tscn
+res://src/scenes/weapons/rifles/weapon_ak.tscn
