@@ -21,7 +21,7 @@ public partial class player_cursor : Line2D
             float lengthdelta = ((player_position + mouseposition).Length() - aimingcursor_length) - offset_playerposition;
 
             mouseposition.x -= lengthdelta;
-            // Try putting this in if statement below
+            
         }
 
         if(mouseposition.x < offset_playerposition)
