@@ -1,8 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/scripts/menu/main_menu.cs" type="Script" id=1]
 [ext_resource path="res://src/sprites/menu/export/title/export/title.png" type="Texture" id=2]
 [ext_resource path="res://src/fonts/pressstart2p/PressStart2P-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://src/shaders/dropshadow.shader" type="Shader" id=4]
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 4 )
+shader_param/radius = 5.0
+shader_param/modulate = null
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -56,6 +62,7 @@ margin_bottom = 688.0
 custom_constants/separation = 10
 
 [node name="Logo" type="TextureRect" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
+material = SubResource( 4 )
 margin_right = 576.0
 margin_bottom = 324.0
 texture = ExtResource( 2 )
@@ -124,3 +131,5 @@ custom_fonts/font = SubResource( 3 )
 text = "Pre-Alpha © Pa1yn"
 align = 1
 valign = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

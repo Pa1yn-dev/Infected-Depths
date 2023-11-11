@@ -4,14 +4,17 @@ using System;
 
 public partial class audiostrmplay2d : Node
 {
-    public void PlayAudio(AudioStreamPlayer2D audioplayer, AudioStreamSample sample)
+    private AudioStreamPlayer2D audioplayer;
+    public void PlayAudio(Node input_parent_node, AudioStreamSample input_sample, String input_bus)
     {
-
         audioplayer = new AudioStreamPlayer2D();
-        audioplayer.Stream = sample;
+        audioplayer.Bus = input_bus;
+        audioplayer.Stream = input_sample;
         audioplayer.Connect("finished", audioplayer, "queue_free");
-        audioplayer.AddChild(audioplayer);
+        input_parent_node.AddChild(audioplayer);
+
         audioplayer.Play();
-        
     }
+
+    
 }

@@ -147,6 +147,20 @@ tracks/5/keys = {
 "update": 1,
 "values": [ 1 ]
 }
+tracks/6/type = "method"
+tracks/6/path = NodePath("Weapon_AK")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_audiostrmplay2d"
+} ]
+}
 
 [sub_resource type="CanvasItemMaterial" id=8]
 particles_animation = true
@@ -232,7 +246,7 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 10 )
 hframes = 7
-frame = 6
+frame = 2
 
 [node name="Bullets_Raycast" type="RayCast2D" parent="."]
 cast_to = Vector2( 64, 0 )
@@ -243,4 +257,4 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 3 )
 hframes = 7
-frame = 6
+frame = 2
