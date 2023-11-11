@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class pause_menu : Control
+public partial class pause_menu : Control
 {
     private Control pausemenu_controlnode;
     private CanvasLayer load_scenetransition;
@@ -21,17 +21,17 @@ public class pause_menu : Control
 
     public void GetUserInput()
     {
-        if(resume_button.Pressed == true)
+        if(resume_button.ButtonPressed == true)
         {
             pausemenu_controlnode.Hide();
         }
 
-        if(settings_button.Pressed == true)
+        if(settings_button.ButtonPressed == true)
         {
 
         }
 
-        if(exit_button.Pressed == true)
+        if(exit_button.ButtonPressed == true)
         {
             load_scenetransition.Call("SceneTransition", "res://src/scenes/menu/main_menu.tscn");
         }

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "aQ0wTddxM+NDFzDPEQBLZ9/hRI8z/DTA6P7YFKTW8ldt/Ph0xWxwAhB3YGsA2K5GO0GFenM890tGE7wpiGiLHQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\peter\\Documents\\GitHub\\Infected-Depths\\Infected-Depths.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\peter\\.nuget\\packages\\godot.sourcegenerators\\4.0.2\\godot.sourcegenerators.4.0.2.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\godotsharp\\4.0.2\\godotsharp.4.0.2.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\godotsharpeditor\\4.0.2\\godotsharpeditor.4.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

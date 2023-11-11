@@ -1,37 +1,37 @@
-[gd_resource type="AudioBusLayout" load_steps=5 format=2]
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://bpn1fv7taaq6s"]
 
-[sub_resource type="AudioEffectLimiter" id=2]
+[sub_resource type="AudioEffectLimiter" id="2"]
 resource_name = "Limiter"
 ceiling_db = -10.0
 
-[sub_resource type="AudioEffectStereoEnhance" id=4]
+[sub_resource type="AudioEffectStereoEnhance" id="4"]
 resource_name = "StereoEnhance"
 
-[sub_resource type="AudioEffectHighShelfFilter" id=5]
+[sub_resource type="AudioEffectHighShelfFilter" id="5"]
 resource_name = "HighShelfFilter"
 
-[sub_resource type="AudioEffectReverb" id=6]
+[sub_resource type="AudioEffectReverb" id="6"]
 resource_name = "Reverb"
 room_size = 0.1
 
 [resource]
-bus/1/name = "Music"
+bus/1/name = &"Music"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
 bus/1/volume_db = 0.0
-bus/1/send = "Master"
-bus/2/name = "SFX"
+bus/1/send = &"Master"
+bus/2/name = &"SFX"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
 bus/2/volume_db = 0.0
-bus/2/send = "Master"
-bus/2/effect/0/effect = SubResource( 2 )
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("2")
 bus/2/effect/0/enabled = true
-bus/2/effect/1/effect = SubResource( 4 )
+bus/2/effect/1/effect = SubResource("4")
 bus/2/effect/1/enabled = true
-bus/2/effect/2/effect = SubResource( 5 )
+bus/2/effect/2/effect = SubResource("5")
 bus/2/effect/2/enabled = true
-bus/2/effect/3/effect = SubResource( 6 )
+bus/2/effect/3/effect = SubResource("6")
 bus/2/effect/3/enabled = false

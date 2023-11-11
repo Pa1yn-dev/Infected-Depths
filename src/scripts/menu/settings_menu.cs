@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class settings_menu : Control
+public partial class settings_menu : Control
 {
     private Control settingsmenu_controlnode;
     private HSlider masteraudiovol_slider;
@@ -28,12 +28,12 @@ public class settings_menu : Control
 
     public void GetUserInput()
     {
-        if(close_button.Pressed == true)
+        if(close_button.ButtonPressed == true)
         {
             settingsmenu_controlnode.Hide();
         }
 
-        if(save_button.Pressed == false)
+        if(save_button.ButtonPressed == false)
         {
             // Call custom save_settings method
         }
@@ -47,7 +47,7 @@ public class settings_menu : Control
         audiobusmanager.ChangeBusVolume("SFX", (float)sfxvol_slider.Value);
     }
 
-    public override void _Process(float delta)
+    public override void _Process(double delta)
     {
         
         GetUserInput();

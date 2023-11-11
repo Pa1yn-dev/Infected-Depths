@@ -1,13 +1,14 @@
 [remap]
 
 importer="wav"
-type="AudioStreamSample"
-path="res://.import/GunshotAssaultRifle_BW.5_79.wav-7faf205510c617cd48766d348938b631.sample"
+type="AudioStreamWAV"
+uid="uid://dglrfnrkmrgev"
+path="res://.godot/imported/GunshotAssaultRifle_BW.5_79.wav-7faf205510c617cd48766d348938b631.sample"
 
 [deps]
 
 source_file="res://src/audio/sfx/GunshotAssaultRifle_BW.5_79.wav"
-dest_files=[ "res://.import/GunshotAssaultRifle_BW.5_79.wav-7faf205510c617cd48766d348938b631.sample" ]
+dest_files=["res://.godot/imported/GunshotAssaultRifle_BW.5_79.wav-7faf205510c617cd48766d348938b631.sample"]
 
 [params]
 

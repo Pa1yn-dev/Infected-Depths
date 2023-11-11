@@ -1,17 +1,17 @@
 using Godot;
 using System;
 
-public class weapon_ak : Node2D
+public partial class weapon_ak : Node2D
 {
     private AnimationPlayer weapon_animationplayer;
-    private AudioStreamSample sample_akgunfire_sfx;
+    private AudioStreamWav sample_akgunfire_sfx;
     private Node2D parent_node;
 
     public override void _Ready()
     {
         weapon_animationplayer = GetNode<AnimationPlayer>("Weapon_AnimationPlayer");
 
-        sample_akgunfire_sfx = (AudioStreamSample)GD.Load("res://src/audio/sfx/GunshotAssaultRifle_BW.5_79.wav");
+        sample_akgunfire_sfx = (AudioStreamWav)GD.Load("res://src/audio/sfx/GunshotAssaultRifle_BW.5_79.wav");
         parent_node = GetNode<Node2D>(".");
     }
 
@@ -43,7 +43,7 @@ public class weapon_ak : Node2D
         audiostrmplay2d.PlayAudio(parent_node, sample_akgunfire_sfx, "SFX"); 
     }
 
-    public override void _Process(float delta)
+    public override void _Process(double delta)
     {
         GetUserInput();
     }

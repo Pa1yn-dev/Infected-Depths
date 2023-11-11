@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class main_menu : Control
+public partial class main_menu : Control
 {
     private Button play_button;
     private Button settings_button;
@@ -14,7 +14,7 @@ public class main_menu : Control
 
     private Control settingsmenu_node;
 
-    private AudioStreamSample sample_menubuttononclick_sfx;
+    private AudioStreamWav sample_menubuttononclick_sfx;
     private Control parent_node;
 
     public override void _Ready()
@@ -31,7 +31,7 @@ public class main_menu : Control
         settingsmenu_node = GetNode<Control>("Sub_Menus/Settings_Menu");
         settingsmenu_node.Hide();
 
-        sample_menubuttononclick_sfx = (AudioStreamSample)GD.Load("res://src/audio/sfx/main_menu/menubuttonclick_01.wav");
+        sample_menubuttononclick_sfx = (AudioStreamWav)GD.Load("res://src/audio/sfx/main_menu/menubuttonclick_01.wav");
         parent_node = GetNode<Control>(".");
     }
 
@@ -44,7 +44,7 @@ public class main_menu : Control
             
         }
 
-        if(play_button.Pressed == true)
+        if(play_button.ButtonPressed == true)
         { 
             load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main_test.tscn");
             audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");
@@ -56,7 +56,7 @@ public class main_menu : Control
 
         }
 
-        if(settings_button.Pressed == true)
+        if(settings_button.ButtonPressed == true)
         {
             settingsmenu_node.Show();
             audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");   
@@ -68,7 +68,7 @@ public class main_menu : Control
 
         }
 
-        if(exit_button.Pressed == true)
+        if(exit_button.ButtonPressed == true)
         {
             audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");
             GetTree().Quit(0);
@@ -78,7 +78,7 @@ public class main_menu : Control
 
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(float delta)
+    public override void _Process(double delta)
     {
         menu_animationplayer.Play("title_movement");
     }

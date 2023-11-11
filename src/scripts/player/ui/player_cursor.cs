@@ -14,25 +14,25 @@ public partial class player_cursor : Line2D
         Vector2 player_position = Position;
         Vector2 mouseposition = GetLocalMousePosition();
 
-        player_position.x += offset_playerposition;
+        player_position.X += offset_playerposition;
 
         if ((player_position + mouseposition).Length() > aimingcursor_length)
         {
             float lengthdelta = ((player_position + mouseposition).Length() - aimingcursor_length) - offset_playerposition;
 
-            mouseposition.x -= lengthdelta;
+            mouseposition.X -= lengthdelta;
         }
 
-        if(mouseposition.x < offset_playerposition)
+        if(mouseposition.X < offset_playerposition)
         {
-            mouseposition.x = offset_playerposition;
+            mouseposition.X = offset_playerposition;
         }
         
         AddPoint(player_position);
         AddPoint(mouseposition);
     }
     
-    public override void _Process(float delta)
+    public override void _Process(double delta)
     {
         ClearPoints();
         DrawLineToCursor();
