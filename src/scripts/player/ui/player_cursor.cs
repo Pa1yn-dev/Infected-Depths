@@ -23,9 +23,9 @@ public partial class player_cursor : Line2D
             // Try putting this in if statement below
         }
 
-        if(mouseposition.x < 0)
+        if(mouseposition.x < offset_playerposition)
         {
-            Math.Abs(mouseposition.x);
+            mouseposition.x = offset_playerposition;
         }
         
         AddPoint(player_position);
