@@ -5,6 +5,7 @@
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
+player_vhipvelocity = 425.0
 
 [node name="CollisionShape" type="CollisionPolygon2D" parent="."]
 
