@@ -420,11 +420,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kitt/Documents/Godot/LookDown/Lookdown.csproj",
+      "projectUniqueName": "/home/kitt/Documents/GitHub/LookDown/Lookdown.csproj",
       "projectName": "Lookdown",
-      "projectPath": "/home/kitt/Documents/Godot/LookDown/Lookdown.csproj",
+      "projectPath": "/home/kitt/Documents/GitHub/LookDown/Lookdown.csproj",
       "packagesPath": "/home/kitt/.nuget/packages/",
-      "outputPath": "/home/kitt/Documents/Godot/LookDown/.mono/temp/obj/",
+      "outputPath": "/home/kitt/Documents/GitHub/LookDown/.mono/temp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kitt/.nuget/NuGet/NuGet.Config"

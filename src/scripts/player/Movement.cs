@@ -22,7 +22,7 @@ public class Movement : KinematicBody2D
     // Called when the node enters the scene tree for the first time.
     public void GetUserInput()
     {
-        //LookAt(GetGlobalMousePosition());
+        LookAt(GetGlobalMousePosition());
 
         player_velocity = new Vector2();
 
@@ -44,6 +44,7 @@ public class Movement : KinematicBody2D
         }
         else if (!Input.IsActionPressed("left"))
         {
+            
             player_velocity.x = Lerp(player_velocity.x, 0, lerp_weight);
             
         }
@@ -73,12 +74,12 @@ public class Movement : KinematicBody2D
         // ADS
         if (Input.IsActionPressed("right_click"))
         {
-            player_velocity *= player_vadsmagnitude;
+            player_velocity = player_velocity.Normalized() * player_vadsmagnitude;
         }
  
         else
-        { 
-            player_velocity *= player_vhipmagnitude;
+        {   
+            player_velocity = player_velocity.Normalized() * player_vhipmagnitude;
         }
             
         
