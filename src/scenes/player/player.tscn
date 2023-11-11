@@ -179,6 +179,7 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 4 )
 hframes = 7
+frame = 4
 
 [node name="Bullets_Raycast" type="RayCast2D" parent="Weapon"]
 cast_to = Vector2( 64, 0 )
@@ -191,6 +192,7 @@ position = Vector2( 0, -20 )
 rotation = 1.5708
 texture = ExtResource( 6 )
 hframes = 7
+frame = 4
 
 [node name="Torso_Sprite" type="Sprite" parent="Player_Body"]
 position = Vector2( 0, -20 )
