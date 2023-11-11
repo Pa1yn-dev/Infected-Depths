@@ -21,7 +21,7 @@ public class main_menu : Control
     {
         if(play_button.Pressed == true)
         {
-            GetTree().ChangeScene("res://src/scenes/main/main.tscn");
+            new loading_scrn().SceneTransition();
 
         }
 

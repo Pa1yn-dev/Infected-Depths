@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Infected Depths"
-run/main_scene="res://src/scenes/main/main.tscn"
+run/main_scene="res://src/scenes/menu/main_menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+LoadingScreen="*res://src/scenes/menu/loading_screen.tscn"
 
 [display]
 
