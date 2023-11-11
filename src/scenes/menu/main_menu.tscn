@@ -85,31 +85,34 @@ margin_right = 1920.0
 margin_bottom = 1080.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
-margin_left = 672.0
-margin_top = 196.0
-margin_right = 1248.0
-margin_bottom = 884.0
+margin_left = 640.0
+margin_top = 148.0
+margin_right = 1280.0
+margin_bottom = 932.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer"]
-margin_right = 576.0
-margin_bottom = 688.0
-custom_constants/separation = 10
+margin_right = 640.0
+margin_bottom = 784.0
+custom_constants/separation = -50
 
 [node name="Title" type="TextureRect" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
 material = SubResource( 4 )
-margin_right = 576.0
-margin_bottom = 324.0
+margin_right = 640.0
+margin_bottom = 480.0
+rect_min_size = Vector2( 640, 480 )
 texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
-margin_top = 334.0
-margin_right = 576.0
-margin_bottom = 688.0
+margin_top = 430.0
+margin_right = 640.0
+margin_bottom = 784.0
 size_flags_vertical = 3
 custom_constants/separation = 50
 
 [node name="Play" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
-margin_right = 576.0
+margin_right = 640.0
 margin_bottom = 36.0
 focus_mode = 0
 custom_colors/font_color_hover = Color( 0, 0, 0, 0.282353 )
@@ -121,7 +124,7 @@ icon_align = 1
 
 [node name="Settings" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
 margin_top = 86.0
-margin_right = 576.0
+margin_right = 640.0
 margin_bottom = 122.0
 focus_mode = 0
 custom_colors/font_color_hover = Color( 0, 0, 0, 0.282353 )
@@ -133,7 +136,7 @@ icon_align = 1
 
 [node name="Credits" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
 margin_top = 172.0
-margin_right = 576.0
+margin_right = 640.0
 margin_bottom = 208.0
 focus_mode = 0
 custom_colors/font_color_hover = Color( 0, 0, 0, 0.282353 )
@@ -145,7 +148,7 @@ icon_align = 1
 
 [node name="Exit" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
 margin_top = 258.0
-margin_right = 576.0
+margin_right = 640.0
 margin_bottom = 294.0
 focus_mode = 0
 custom_colors/font_color_hover = Color( 0, 0, 0, 0.282353 )
@@ -157,7 +160,7 @@ icon_align = 1
 
 [node name="Build Info" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
 margin_top = 344.0
-margin_right = 576.0
+margin_right = 640.0
 margin_bottom = 354.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
