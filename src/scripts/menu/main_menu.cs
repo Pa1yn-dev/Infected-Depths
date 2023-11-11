@@ -14,7 +14,7 @@ public class main_menu : Control
 
     private Control settingsmenu_node;
 
-    private AudioStreamSample sample_menubuttonsfx;
+    private AudioStreamSample sample_menubuttononclick_sfx;
     private Control parent_node;
 
     public override void _Ready()
@@ -31,7 +31,7 @@ public class main_menu : Control
         settingsmenu_node = GetNode<Control>("Sub_Menus/Settings_Menu");
         settingsmenu_node.Hide();
 
-        sample_menubuttonsfx = (AudioStreamSample)GD.Load("res://src/audio/sfx/main_menu/menubuttonclick_01.wav");
+        sample_menubuttononclick_sfx = (AudioStreamSample)GD.Load("res://src/audio/sfx/main_menu/menubuttonclick_01.wav");
         parent_node = GetNode<Control>(".");
     }
 
@@ -39,24 +39,36 @@ public class main_menu : Control
     {
         var audiostrmplay = new audiostrmplay();
         
-        if(play_button.Pressed == true)
+        if(play_button.IsHovered() == true)
         {
-            
-            load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main.tscn");
-            audiostrmplay.PlayAudio(parent_node, sample_menubuttonsfx, "SFX");
 
         }
 
-        if(settings_button.Pressed == true)
+        else if(play_button.Pressed == true)
+        { 
+            load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main.tscn");
+            audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");
+        }
+
+        if(settings_button.IsHovered() == true)
+        {
+
+        }
+
+        else if(settings_button.Pressed == true)
         {
             settingsmenu_node.Show();
-            audiostrmplay.PlayAudio(parent_node, sample_menubuttonsfx, "SFX");
-            
+            audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");   
+        }
+        
+        if(exit_button.IsHovered() == true)
+        {
+
         }
 
-        if(exit_button.Pressed == true)
+        else if(exit_button.Pressed == true)
         {
-            audiostrmplay.PlayAudio(parent_node, sample_menubuttonsfx, "SFX");
+            audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");
             GetTree().Quit(0);
         }
 

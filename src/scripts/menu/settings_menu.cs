@@ -33,7 +33,7 @@ public class settings_menu : Control
             settingsmenu_controlnode.Hide();
         }
 
-        if(close_button.Pressed == false)
+        if(save_button.Pressed == false)
         {
             // Call custom save_settings method
         }
