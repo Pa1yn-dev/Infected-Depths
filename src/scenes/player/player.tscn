@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/scripts/player/Movement.cs" type="Script" id=1]
-[ext_resource path="res://src/scenes/weapons/rifles/Weapon_AK.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/scenes/weapons/rifles/weapon_ak.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/scripts/player/ui/player_cursor.cs" type="Script" id=3]
 [ext_resource path="res://src/sprites/player/export/head/helmet/defaultuniformhelmet_spritesheet_300123.png" type="Texture" id=5]
 [ext_resource path="res://src/sprites/player/export/torso/defaultuniformtorso_spritesheet_300123.png" type="Texture" id=7]
