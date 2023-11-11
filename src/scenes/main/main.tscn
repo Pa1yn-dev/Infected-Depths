@@ -13,3 +13,6 @@ expand = true
 stretch_mode = 7
 
 [node name="Player_Body" parent="." instance=ExtResource( 1 )]
+
+[node name="Floor" type="TileMap" parent="."]
+format = 1
