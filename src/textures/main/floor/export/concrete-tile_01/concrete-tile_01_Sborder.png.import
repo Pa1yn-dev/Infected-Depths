@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/concrete-tile_01.png-d8ca073e16751bc98204ac00d4184f4a.stex"
+path="res://.import/concrete-tile_01_Sborder.png-4972c7dd6fca9975ec1272354f13b762.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/textures/main/floor/export/concrete-tile_01.png"
-dest_files=[ "res://.import/concrete-tile_01.png-d8ca073e16751bc98204ac00d4184f4a.stex" ]
+source_file="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01_Sborder.png"
+dest_files=[ "res://.import/concrete-tile_01_Sborder.png-4972c7dd6fca9975ec1272354f13b762.stex" ]
 
 [params]
 
