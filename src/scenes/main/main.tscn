@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://33gp4tvt0k2i"]
+[gd_scene load_steps=16 format=3 uid="uid://33gp4tvt0k2i"]
 
 [ext_resource type="Texture2D" uid="uid://b3romq7x6blc7" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://ckt4w46ot40ex" path="res://src/scenes/player/player.tscn" id="2"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bluwjkdhg5mqw" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01_Cborder.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dvjq8aokdeelj" path="res://src/textures/main/walls/export/concrete-wall_01/concrete-wall_01_ssection.png" id="6"]
 [ext_resource type="PackedScene" uid="uid://bjadm2gau54b7" path="res://src/scenes/menu/pause_menu.tscn" id="7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ehlhl"]
+blend_mode = 2
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pv4wl"]
 texture = ExtResource("1")
@@ -171,6 +174,10 @@ sources/0 = SubResource("TileSetAtlasSource_ersxl")
 
 [node name="Main" type="Node2D"]
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+material = SubResource("CanvasItemMaterial_ehlhl")
+color = Color(0, 0, 0, 1)
+
 [node name="TileMaps" type="Node2D" parent="."]
 
 [node name="Floor_TileMap" type="TileMap" parent="TileMaps"]
@@ -187,6 +194,6 @@ layer_0/tile_data = PackedInt32Array(10, 0, 393216, 65546, 0, 393216, 131082, 0,
 player_vhipvelocity = 250.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("7")]
-visible = false

@@ -1,2 +1,4 @@
-CharacterBody2D
+PointLight2D
 CanvasLayer
+CanvasModulate
+CharacterBody2D
