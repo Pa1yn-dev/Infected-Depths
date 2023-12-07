@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "T+yy7rOc4dS9/iN2hrI7W62rOkXZ7kbaJ0CxdQEQTARzhaUE4n71Uq4QScJn+xkjtLOExR5kNUelvJXLKXGpTQ==",
+  "dgSpecHash": "Yr/iDi9ZLCnfShxhaIG6EJKHh0vPk+bosL8VJ5mEIlVcLE8EaB0Zk2FYE2vP1KPcETmNiXGg/oUtzsVdJfH/dQ==",
   "success": true,
-  "projectFilePath": "/home/pa1yn/Documents/GitHub/Infected-Depths/Infected-Depths.csproj",
+  "projectFilePath": "C:\\Users\\peter\\Documents\\GitHub\\Infected-Depths\\Infected-Depths.csproj",
   "expectedPackageFiles": [
-    "/home/pa1yn/.nuget/packages/godot.sourcegenerators/4.1.3/godot.sourcegenerators.4.1.3.nupkg.sha512",
-    "/home/pa1yn/.nuget/packages/godotsharp/4.1.3/godotsharp.4.1.3.nupkg.sha512",
-    "/home/pa1yn/.nuget/packages/godotsharpeditor/4.1.3/godotsharpeditor.4.1.3.nupkg.sha512",
-    "/home/pa1yn/.nuget/packages/microsoft.netcore.app.ref/6.0.24/microsoft.netcore.app.ref.6.0.24.nupkg.sha512",
-    "/home/pa1yn/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.24/microsoft.aspnetcore.app.ref.6.0.24.nupkg.sha512"
+    "C:\\Users\\peter\\.nuget\\packages\\godot.sourcegenerators\\4.2.0\\godot.sourcegenerators.4.2.0.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\godotsharp\\4.2.0\\godotsharp.4.2.0.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\godotsharpeditor\\4.2.0\\godotsharpeditor.4.2.0.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.22\\microsoft.netcore.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.22\\microsoft.windowsdesktop.app.ref.6.0.22.nupkg.sha512",
+    "C:\\Users\\peter\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.22\\microsoft.aspnetcore.app.ref.6.0.22.nupkg.sha512"
   ],
   "logs": []
 }

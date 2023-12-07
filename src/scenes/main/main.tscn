@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://33gp4tvt0k2i"]
+[gd_scene load_steps=34 format=3 uid="uid://33gp4tvt0k2i"]
 
 [ext_resource type="Texture2D" uid="uid://b3romq7x6blc7" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01.png" id="1"]
 [ext_resource type="PackedScene" uid="uid://ckt4w46ot40ex" path="res://src/scenes/player/player.tscn" id="2"]
@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bluwjkdhg5mqw" path="res://src/textures/main/floor/export/concrete-tile_01/concrete-tile_01_Cborder.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://dvjq8aokdeelj" path="res://src/textures/main/walls/export/concrete-wall_01/concrete-wall_01_ssection.png" id="6"]
 [ext_resource type="PackedScene" uid="uid://bjadm2gau54b7" path="res://src/scenes/menu/pause_menu.tscn" id="7"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ehlhl"]
-blend_mode = 2
+[ext_resource type="Texture2D" uid="uid://uewewkmxuldj" path="res://src/sprites/omzNL.png" id="7_f10y2"]
+[ext_resource type="Texture2D" uid="uid://cto6p3w0p2ohh" path="res://src/sprites/c3567570fdc3437d7309d2a639f1e303c87d51f5.jpg" id="7_xc1xn"]
+[ext_resource type="PackedScene" path="res://src/scenes/menu/settings_menu.tscn" id="10_udc5v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pv4wl"]
 texture = ExtResource("1")
@@ -118,44 +118,98 @@ sources/1 = SubResource("TileSetAtlasSource_v3v4m")
 sources/2 = SubResource("TileSetAtlasSource_t0x4c")
 sources/3 = SubResource("TileSetAtlasSource_fahn4")
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gio8y"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_joy1g"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, 0, -32, -0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xpllj"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q0obn"]
+polygon = PackedVector2Array(-32, -32, 32, -32, 32, -0.5, -32, -0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_det4h"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_b8sko"]
+polygon = PackedVector2Array(-32, 0, 32, -0.5, 32, 32, -32, 32)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ox88q"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tyg8k"]
+polygon = PackedVector2Array(-32, -0.5, -32, 32, 32, 32, 32, -0.5)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4shi8"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qy8lp"]
+polygon = PackedVector2Array(-32, -32, 0, -32, -0.5, 32, -32, 32)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0jyac"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w2n8v"]
+polygon = PackedVector2Array(0, -32, 32, -32, 32, 32, -0.5, 32)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_udett"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6g34q"]
+polygon = PackedVector2Array(-32, -32, 0, -32, -0.5, 32, -32, 32)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ms8l3"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pg4ke"]
+polygon = PackedVector2Array(0.5, -32, 32, -32, 32, 32, 0, 32)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ersxl"]
 texture = ExtResource("6")
 texture_region_size = Vector2i(64, 64)
-0:0/next_alternative_id = 8
+0:0/next_alternative_id = 9
 0:0/0 = 0
+0:0/0/material = SubResource("CanvasItemMaterial_gio8y")
+0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_joy1g")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(32, 0, -32, 0, -32, -32, 32, -32)
 0:0/1 = 1
 0:0/1/flip_h = true
+0:0/1/material = SubResource("CanvasItemMaterial_xpllj")
+0:0/1/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_q0obn")
 0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/1/physics_layer_0/angular_velocity = 0.0
 0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, 32, 0, 32, -32, -32, -32)
 0:0/2 = 2
 0:0/2/flip_v = true
+0:0/2/material = SubResource("CanvasItemMaterial_det4h")
+0:0/2/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_b8sko")
 0:0/2/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/2/physics_layer_0/angular_velocity = 0.0
 0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(32, 0, -32, 0, -32, 32, 32, 32)
 0:0/3 = 3
 0:0/3/flip_h = true
 0:0/3/flip_v = true
+0:0/3/material = SubResource("CanvasItemMaterial_ox88q")
+0:0/3/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_tyg8k")
 0:0/3/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/3/physics_layer_0/angular_velocity = 0.0
 0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 0, 32, 0, 32, 32, -32, 32)
 0:0/4 = 4
 0:0/4/transpose = true
+0:0/4/material = SubResource("CanvasItemMaterial_4shi8")
+0:0/4/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_qy8lp")
 0:0/4/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/4/physics_layer_0/angular_velocity = 0.0
 0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(32, 2.79753e-06, -32, -2.79753e-06, -32, -32, 32, -32)
 0:0/5 = 5
 0:0/5/flip_h = true
 0:0/5/transpose = true
+0:0/5/material = SubResource("CanvasItemMaterial_0jyac")
+0:0/5/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_w2n8v")
 0:0/5/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/5/physics_layer_0/angular_velocity = 0.0
 0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -2.79753e-06, 32, 2.79753e-06, 32, -32, -32, -32)
 0:0/6 = 6
 0:0/6/flip_v = true
 0:0/6/transpose = true
+0:0/6/material = SubResource("CanvasItemMaterial_udett")
+0:0/6/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_6g34q")
 0:0/6/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/6/physics_layer_0/angular_velocity = 0.0
 0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(32, 2.79753e-06, -32, -2.79753e-06, -32, 32, 32, 32)
@@ -163,20 +217,19 @@ texture_region_size = Vector2i(64, 64)
 0:0/7/flip_h = true
 0:0/7/flip_v = true
 0:0/7/transpose = true
+0:0/7/material = SubResource("CanvasItemMaterial_ms8l3")
+0:0/7/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_pg4ke")
 0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/7/physics_layer_0/angular_velocity = 0.0
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -2.79753e-06, 32, 2.79753e-06, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="2"]
 tile_size = Vector2i(64, 64)
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ersxl")
 
 [node name="Main" type="Node2D"]
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-material = SubResource("CanvasItemMaterial_ehlhl")
-color = Color(0, 0, 0, 1)
 
 [node name="TileMaps" type="Node2D" parent="."]
 
@@ -193,7 +246,28 @@ layer_0/tile_data = PackedInt32Array(10, 0, 393216, 65546, 0, 393216, 131082, 0,
 [node name="Player" parent="." instance=ExtResource("2")]
 player_vhipvelocity = 250.0
 
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+rotation = -1.5708
+energy = 0.85
+blend_mode = 2
+shadow_enabled = true
+texture = ExtResource("7_xc1xn")
+offset = Vector2(13, 175)
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
+energy = 0.42
+shadow_enabled = true
+texture = ExtResource("7_f10y2")
+texture_scale = 1.95
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("7")]
+visible = false
+
+[node name="Settings_Menu" parent="CanvasLayer/Pause_Menu" instance=ExtResource("10_udc5v")]
+visible = false
+anchors_preset = 0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)

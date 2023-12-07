@@ -1,4 +1,5 @@
 PointLight2D
-CanvasLayer
+DirectionalLight2D
 CanvasModulate
+CanvasLayer
 CharacterBody2D

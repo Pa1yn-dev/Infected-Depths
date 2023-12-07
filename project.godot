@@ -12,12 +12,13 @@ config_version=5
 
 config/name="Infected-Depths"
 run/main_scene="res://src/scenes/menu/main_menu.tscn"
-config/features=PackedStringArray("4.1", "C#")
+config/features=PackedStringArray("4.2", "C#")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://src/misc/splash-screen/export/spashscreen-01.png"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 boot_splash/minimum_display_time=1000
+config/defaults/default_clear_color=Color(0, 0, 0, 0.862745)
 
 [autoload]
 
@@ -100,5 +101,6 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 textures/default_filters/anisotropic_filtering_level=3
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 environment/defaults/default_environment="res://default_env.tres"
 2d/fullsize=false

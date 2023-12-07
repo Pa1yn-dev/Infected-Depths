@@ -247,16 +247,16 @@ _data = {
 }
 
 [sub_resource type="CanvasItemMaterial" id="8"]
+blend_mode = 1
 particles_animation = true
 particles_anim_h_frames = 1
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
 [sub_resource type="ParticleProcessMaterial" id="6"]
-emission_shape = 5
-emission_point_count = 1
 spread = 0.0
 gravity = Vector3(0, 0, 0)
+anim_offset_max = 1.0
 
 [sub_resource type="AnimatedTexture" id="7"]
 frames = 7
@@ -298,6 +298,8 @@ process_material = SubResource("6")
 texture = SubResource("7")
 lifetime = 0.01
 one_shot = true
+fixed_fps = 0
+local_coords = true
 
 [node name="Shell_Ejection" type="GPUParticles2D" parent="."]
 position = Vector2(15, 7)

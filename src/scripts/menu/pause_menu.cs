@@ -4,6 +4,7 @@ using System;
 public partial class pause_menu : Control
 {
     private Control pausemenu_controlnode;
+    private Control settingsmenu_node;
     private CanvasLayer load_scenetransition;
     private Button resume_button;
     private Button settings_button;
@@ -17,6 +18,9 @@ public partial class pause_menu : Control
         resume_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Resume");
         settings_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Settings");
         exit_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Exit");
+
+        settingsmenu_node = GetNode<Control>("./Settings_Menu");
+        settingsmenu_node.Hide();
     }
 
     public void GetUserInput()
@@ -35,7 +39,7 @@ public partial class pause_menu : Control
 
         if(settings_button.ButtonPressed == true)
         {
-
+            settingsmenu_node.Show();   
         }
 
         if(exit_button.ButtonPressed == true)
