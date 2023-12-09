@@ -1,11 +1,11 @@
 res://default_bus_layout.tres
 res://default_env.tres
-res://src/scenes/menu/main_menu.tscn
 res://src/scenes/main/main.tscn
+res://src/shaders/crt.gdshader
 res://src/scenes/weapons/rifles/weapon_ak.tscn
 res://src/scenes/menu/pause_menu.tscn
 res://src/scenes/menu/misc/loading_screen.tscn
 res://src/scenes/player/player.tscn
-res://src/shaders/crt.gdshader
+res://src/scenes/menu/main_menu.tscn
 res://src/scenes/menu/settings_menu.tscn
 res://src/scenes/misc/screen_effects_overlay.tscn

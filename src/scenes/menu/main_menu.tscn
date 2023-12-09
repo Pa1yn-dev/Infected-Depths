@@ -6,7 +6,7 @@
 [ext_resource type="Shader" path="res://src/shaders/dropshadow.gdshader" id="4"]
 [ext_resource type="PackedScene" uid="uid://cshwjvyt314wi" path="res://src/scenes/menu/settings_menu.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://wbbmqme821fo" path="res://src/misc/theme-art/export/Theme_Art_02-export.png" id="6"]
-[ext_resource type="Texture2D" uid="uid://b5npnfy3rkpc1" path="res://src/misc/godot-press-kit/logo_small_monochrome_dark.png" id="7_cpcby"]
+[ext_resource type="PackedScene" uid="uid://cvwtjtm5ijrjw" path="res://src/scenes/misc/screen_effects_overlay.tscn" id="7_r28tt"]
 
 [sub_resource type="ShaderMaterial" id="4"]
 shader = ExtResource("4")
@@ -169,27 +169,22 @@ theme_override_fonts/font = SubResource("3")
 text = "Pre-Alpha © Pa1yn"
 horizontal_alignment = 1
 
+[node name="Godot" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("3")
+text = "Made with Godot 4.2"
+horizontal_alignment = 1
+
 [node name="Menu_AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ggscy")
 }
 
-[node name="Sub_Menus" type="CanvasLayer" parent="."]
+[node name="ScreenEffectsOverlay" parent="." instance=ExtResource("7_r28tt")]
 
-[node name="Settings_Menu" parent="Sub_Menus" instance=ExtResource("5")]
+[node name="Sub_Menus" type="CanvasLayer" parent="ScreenEffectsOverlay"]
+
+[node name="Settings_Menu" parent="ScreenEffectsOverlay/Sub_Menus" instance=ExtResource("5")]
 visible = false
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = -64.0001
-offset_right = 2910.0
-offset_bottom = 1016.0
-grow_vertical = 0
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_cpcby")
