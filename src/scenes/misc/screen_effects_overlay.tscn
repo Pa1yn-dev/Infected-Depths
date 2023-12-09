@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvwtjtm5ijrjw"]
+
+[ext_resource type="Shader" path="res://src/shaders/crt.gdshader" id="1_yamp3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5wffl"]
+shader = ExtResource("1_yamp3")
+shader_parameter/crt_brightness_max = 7.517
+shader_parameter/crt_brightness = 1.0
+shader_parameter/crt_brightness_mod = 0.5
+shader_parameter/crt_ghost = 4.258
+shader_parameter/crt_grid = 0.1
+shader_parameter/crt_white_noise = 0.09
+shader_parameter/crt_curve = 0.05
+
+[node name="ScreenEffectsOverlay" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_5wffl")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

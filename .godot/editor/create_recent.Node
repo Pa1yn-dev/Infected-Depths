@@ -1,5 +1,9 @@
+ColorRect
+CanvasLayer
+TextureRect
+AudioStreamPlayer
+LightOccluder2D
 PointLight2D
 DirectionalLight2D
 CanvasModulate
-CanvasLayer
 CharacterBody2D

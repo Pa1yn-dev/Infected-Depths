@@ -1,154 +1,141 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://cshwjvyt314wi"]
 
-[ext_resource path="res://src/shaders/menu_blur.tres" type="Shader" id=1]
-[ext_resource path="res://src/fonts/pressstart2p/PressStart2P-Regular.ttf" type="FontFile" id=2]
-[ext_resource path="res://src/scripts/menu/settings_menu.cs" type="Script" id=3]
+[ext_resource type="Shader" uid="uid://dg7tq4xfn4vkm" path="res://src/shaders/menu_blur.tres" id="1"]
+[ext_resource type="FontFile" uid="uid://b3562mk8v2a2u" path="res://src/fonts/pressstart2p/PressStart2P-Regular.ttf" id="2"]
+[ext_resource type="Script" path="res://src/scripts/menu/settings_menu.cs" id="3"]
 
-[sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 1 )
-shader_param/blur_amount = 2.0
-shader_param/mix_amount = 0.0
-shader_param/color_over = null
+[sub_resource type="ShaderMaterial" id="2"]
+shader = ExtResource("1")
+shader_parameter/blur_amount = 2.0
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = null
 
-[sub_resource type="FontFile" id=3]
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id=4]
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="4"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
-[sub_resource type="FontFile" id=5]
-size = 20
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+[sub_resource type="FontFile" id="5"]
+fallbacks = Array[Font]([ExtResource("2")])
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="Settings_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="ColorRect" type="ColorRect" parent="MarginContainer"]
-material = SubResource( 2 )
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color( 0, 0, 0, 0.392157 )
+material = SubResource("2")
+layout_mode = 2
+color = Color(0, 0, 0, 0.392157)
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
-offset_right = 1920.0
-offset_bottom = 1080.0
+layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
-offset_left = 760.0
-offset_top = 473.0
-offset_right = 1160.0
-offset_bottom = 607.0
+layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer"]
-offset_right = 400.0
-offset_bottom = 134.0
+layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 20
 
 [node name="Master_Audio_Level" type="HSplitContainer" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
-offset_right = 400.0
-offset_bottom = 16.0
+layout_mode = 2
 dragger_visibility = 1
 
 [node name="Label" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Master_Audio_Level"]
-offset_right = 288.0
-offset_bottom = 16.0
+layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = SubResource( 3 )
+theme_override_fonts/font = SubResource("3")
 text = "Master Audio Level"
-align = 1
 
 [node name="HSlider" type="HSlider" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Master_Audio_Level"]
-offset_left = 300.0
-offset_right = 400.0
-offset_bottom = 16.0
-custom_minimum_size = Vector2( 100, 0 )
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
 max_value = 2.0
 step = 0.05
 
 [node name="Music_Audio_Level" type="HSplitContainer" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
-offset_top = 36.0
-offset_right = 400.0
-offset_bottom = 52.0
+layout_mode = 2
 dragger_visibility = 1
 
 [node name="Label" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Music_Audio_Level"]
-offset_right = 288.0
-offset_bottom = 16.0
+layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = SubResource( 3 )
+theme_override_fonts/font = SubResource("3")
 text = "Music Audio Level"
-align = 1
 
 [node name="HSlider" type="HSlider" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Music_Audio_Level"]
-offset_left = 300.0
-offset_right = 400.0
-offset_bottom = 16.0
-custom_minimum_size = Vector2( 100, 0 )
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
 max_value = 2.0
 step = 0.05
 
 [node name="SFX_Audio_Level" type="HSplitContainer" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
-offset_top = 72.0
-offset_right = 400.0
-offset_bottom = 88.0
+layout_mode = 2
 dragger_visibility = 1
 
 [node name="Label" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/SFX_Audio_Level"]
-offset_right = 288.0
-offset_bottom = 16.0
+layout_mode = 2
 size_flags_horizontal = 3
-theme_override_fonts/font = SubResource( 4 )
+theme_override_fonts/font = SubResource("4")
 text = "SFX Audio Level"
-align = 1
 
 [node name="HSlider" type="HSlider" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/SFX_Audio_Level"]
-offset_left = 300.0
-offset_right = 400.0
-offset_bottom = 16.0
-custom_minimum_size = Vector2( 100, 0 )
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
 max_value = 2.0
 step = 0.05
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
-offset_top = 108.0
-offset_right = 400.0
-offset_bottom = 134.0
+layout_mode = 2
 
 [node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer"]
-offset_right = 400.0
-offset_bottom = 26.0
+layout_mode = 2
 theme_override_constants/separation = 100
 dragger_visibility = 1
 
 [node name="Close" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer/HSplitContainer"]
-offset_right = 112.0
-offset_bottom = 26.0
+layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_hover_color = Color( 0, 0, 0, 0.282353 )
-theme_override_fonts/font = SubResource( 5 )
-focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
+theme_override_fonts/font = SubResource("5")
 text = "Close"
 flat = true
 icon_alignment = 1
 
 [node name="Save" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer/HSplitContainer"]
-offset_left = 212.0
-offset_right = 400.0
-offset_bottom = 26.0
+layout_mode = 2
 focus_mode = 0
-theme_override_colors/font_hover_color = Color( 0, 0, 0, 0.282353 )
-theme_override_fonts/font = SubResource( 5 )
-focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
+theme_override_fonts/font = SubResource("5")
 text = "Save"
 flat = true
 icon_alignment = 1

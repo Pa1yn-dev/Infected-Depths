@@ -34,6 +34,12 @@ window/size/mode=3
 
 project/assembly_name="Infected-Depths"
 
+[editor]
+
+movie_writer/mjpeg_quality=1.0
+movie_writer/movie_file="D:/test.avi"
+movie_writer/disable_vsync=true
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
