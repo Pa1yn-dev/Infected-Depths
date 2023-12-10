@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bjatmi2j0n5d2"]
+[gd_scene load_steps=16 format=3 uid="uid://bjatmi2j0n5d2"]
 
 [ext_resource type="Script" path="res://src/scripts/menu/main_menu.cs" id="1"]
 [ext_resource type="Texture2D" uid="uid://d30pp3410gyp1" path="res://src/sprites/menu/export/title/export/title.png" id="2"]
@@ -6,7 +6,7 @@
 [ext_resource type="Shader" path="res://src/shaders/dropshadow.gdshader" id="4"]
 [ext_resource type="PackedScene" uid="uid://cshwjvyt314wi" path="res://src/scenes/menu/settings_menu.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://wbbmqme821fo" path="res://src/misc/theme-art/export/Theme_Art_02-export.png" id="6"]
-[ext_resource type="PackedScene" uid="uid://cvwtjtm5ijrjw" path="res://src/scenes/misc/screen_effects_overlay.tscn" id="7_r28tt"]
+[ext_resource type="Shader" path="res://src/shaders/crt.gdshader" id="6_aib1x"]
 
 [sub_resource type="ShaderMaterial" id="4"]
 shader = ExtResource("4")
@@ -76,6 +76,16 @@ _data = {
 "RESET": SubResource("5"),
 "title_movement": SubResource("6")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5wffl"]
+shader = ExtResource("6_aib1x")
+shader_parameter/crt_brightness_max = 7.517
+shader_parameter/crt_brightness = 1.0
+shader_parameter/crt_brightness_mod = 0.5
+shader_parameter/crt_ghost = 4.258
+shader_parameter/crt_grid = 0.1
+shader_parameter/crt_white_noise = 0.09
+shader_parameter/crt_curve = 0.05
 
 [node name="Main_Menu" type="Control"]
 layout_mode = 3
@@ -182,7 +192,16 @@ libraries = {
 "": SubResource("AnimationLibrary_ggscy")
 }
 
-[node name="ScreenEffectsOverlay" parent="." instance=ExtResource("7_r28tt")]
+[node name="ScreenEffectsOverlay" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="ScreenEffectsOverlay"]
+material = SubResource("ShaderMaterial_5wffl")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Sub_Menus" type="CanvasLayer" parent="ScreenEffectsOverlay"]
 
