@@ -10,9 +10,12 @@ public partial class pause_menu : Control
     private Button settings_button;
     private Button exit_button;
 
+    private AudioStreamWav sample_menubuttononclick_sfx;
+
     public override void _Ready()
     {
         pausemenu_controlnode = GetNode<Control>(".");
+        sample_menubuttononclick_sfx = (AudioStreamWav)GD.Load("res://src/audio/sfx/main_menu/menubuttonclick_01.wav");
         load_scenetransition = GetNode<CanvasLayer>("/root/LoadingScreen");
 
         resume_button = GetNode<Button>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Resume");
@@ -25,6 +28,8 @@ public partial class pause_menu : Control
 
     public void GetUserInput()
     {
+        var audiostrmplay = new audiostrmplay();
+
         if(Input.IsActionPressed("escape"))
         {
             GetTree().Paused = true;
@@ -33,20 +38,21 @@ public partial class pause_menu : Control
 
         if(resume_button.ButtonPressed == true)
         {
+            audiostrmplay.PlayAudio(pausemenu_controlnode, sample_menubuttononclick_sfx, "SFX");
             GetTree().Paused = false;
             pausemenu_controlnode.Hide();
         }
 
         if(settings_button.ButtonPressed == true)
         {
+            audiostrmplay.PlayAudio(pausemenu_controlnode, sample_menubuttononclick_sfx, "SFX");
             settingsmenu_node.Show();   
         }
 
         if(exit_button.ButtonPressed == true)
         {
-            
+            audiostrmplay.PlayAudio(pausemenu_controlnode, sample_menubuttononclick_sfx, "SFX");
             load_scenetransition.Call("SceneTransition", "res://src/scenes/menu/main_menu.tscn");
-            
         }
     }
 

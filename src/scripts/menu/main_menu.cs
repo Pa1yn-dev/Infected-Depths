@@ -13,6 +13,7 @@ public partial class main_menu : Control
     private AnimationPlayer menu_animationplayer;
 
     private Control settingsmenu_node;
+    private Control creditsmenu_node;
 
     private AudioStreamWav sample_menubuttononclick_sfx;
     private Control parent_node;
@@ -31,6 +32,9 @@ public partial class main_menu : Control
         settingsmenu_node = GetNode<Control>("ScreenEffectsOverlay/Sub_Menus/Settings_Menu");
         settingsmenu_node.Hide();
 
+        creditsmenu_node = GetNode<Control>("ScreenEffectsOverlay/Sub_Menus/Credits_Menu");
+        creditsmenu_node.Hide();
+
         sample_menubuttononclick_sfx = (AudioStreamWav)GD.Load("res://src/audio/sfx/main_menu/menubuttonclick_01.wav");
         parent_node = GetNode<Control>(".");
     }
@@ -48,6 +52,17 @@ public partial class main_menu : Control
         { 
             load_scenetransition.Call("SceneTransition", "res://src/scenes/main/main.tscn");
             audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");
+        }
+
+        if(credits_button.IsHovered() == true)
+        {
+
+        }
+
+        if(credits_button.ButtonPressed == true)
+        {
+            creditsmenu_node.Show();
+            audiostrmplay.PlayAudio(parent_node, sample_menubuttononclick_sfx, "SFX");  
         }
 
 

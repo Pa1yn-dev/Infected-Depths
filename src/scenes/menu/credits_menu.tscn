@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=3 uid="uid://mdqei1l5tos1"]
+
+[ext_resource type="Texture2D" uid="uid://wbbmqme821fo" path="res://src/misc/theme-art/export/Theme_Art_02-export.png" id="1_bhftu"]
+[ext_resource type="Script" path="res://src/scripts/menu/credits_menu.cs" id="1_lkulp"]
+[ext_resource type="Shader" path="res://src/shaders/dropshadow.gdshader" id="2_jb15s"]
+[ext_resource type="Texture2D" uid="uid://d30pp3410gyp1" path="res://src/sprites/menu/export/title/export/title.png" id="3_rvw15"]
+[ext_resource type="FontFile" uid="uid://b3562mk8v2a2u" path="res://src/fonts/pressstart2p/PressStart2P-Regular.ttf" id="4_gx805"]
+
+[sub_resource type="ShaderMaterial" id="4"]
+shader = ExtResource("2_jb15s")
+shader_parameter/radius = 5.0
+shader_parameter/modulate = null
+
+[sub_resource type="FontFile" id="3"]
+fallbacks = Array[Font]([ExtResource("4_gx805")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="FontFile" id="FontFile_aq0tb"]
+fallbacks = Array[Font]([ExtResource("4_gx805")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[node name="Credits_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_lkulp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 1900.0
+offset_bottom = 1060.0
+
+[node name="Background" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_bhftu")
+expand_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -50
+
+[node name="Title" type="TextureRect" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
+material = SubResource("4")
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 2
+texture = ExtResource("3_rvw15")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="Credits0" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("3")
+text = "Programming, level design and art - Peter Hamilton (Pa1yn)"
+horizontal_alignment = 1
+
+[node name="Credits1" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = SubResource("3")
+text = "Sound design - Reuben Blair "
+horizontal_alignment = 1
+
+[node name="Close" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
+theme_override_fonts/font = SubResource("FontFile_aq0tb")
+text = "Close"
+flat = true
+icon_alignment = 1

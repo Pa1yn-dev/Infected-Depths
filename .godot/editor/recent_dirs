@@ -1,3 +1,5 @@
+res://src/scripts/menu
+res://src/scenes/menu
 res://src/scenes/misc
 res://src/shaders
 D:/
@@ -5,5 +7,4 @@ C:/Users/peter/Documents/GitHub/Infected-Depths/src/scripts/menu
 res://src/sprites
 res://src/sprites/menu/export/loading_screen
 res://src/scripts/player
-res://src/scenes/menu
 res://src/scenes/menu/misc

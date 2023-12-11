@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bjatmi2j0n5d2"]
+[gd_scene load_steps=17 format=3 uid="uid://bjatmi2j0n5d2"]
 
 [ext_resource type="Script" path="res://src/scripts/menu/main_menu.cs" id="1"]
 [ext_resource type="Texture2D" uid="uid://d30pp3410gyp1" path="res://src/sprites/menu/export/title/export/title.png" id="2"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cshwjvyt314wi" path="res://src/scenes/menu/settings_menu.tscn" id="5"]
 [ext_resource type="Texture2D" uid="uid://wbbmqme821fo" path="res://src/misc/theme-art/export/Theme_Art_02-export.png" id="6"]
 [ext_resource type="Shader" path="res://src/shaders/crt.gdshader" id="6_aib1x"]
+[ext_resource type="PackedScene" uid="uid://mdqei1l5tos1" path="res://src/scenes/menu/credits_menu.tscn" id="8_oxd38"]
 
 [sub_resource type="ShaderMaterial" id="4"]
 shader = ExtResource("4")
@@ -206,4 +207,7 @@ mouse_filter = 2
 [node name="Sub_Menus" type="CanvasLayer" parent="ScreenEffectsOverlay"]
 
 [node name="Settings_Menu" parent="ScreenEffectsOverlay/Sub_Menus" instance=ExtResource("5")]
+visible = false
+
+[node name="Credits_Menu" parent="ScreenEffectsOverlay/Sub_Menus" instance=ExtResource("8_oxd38")]
 visible = false

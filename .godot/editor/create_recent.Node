@@ -1,3 +1,6 @@
+TextureRect
+AnimationPlayer
+Control
 OptionButton
 HSplitContainer
 ScrollContainer
@@ -5,10 +8,7 @@ VScrollBar
 Label
 ColorRect
 CanvasLayer
-TextureRect
 AudioStreamPlayer
 LightOccluder2D
 PointLight2D
 DirectionalLight2D
-CanvasModulate
-CharacterBody2D

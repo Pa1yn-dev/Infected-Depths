@@ -12,6 +12,9 @@ shader_parameter/color_over = null
 
 [sub_resource type="FontFile" id="FontFile_dg17k"]
 fallbacks = Array[Font]([ExtResource("2")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -188,6 +191,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
 theme_override_fonts/font = SubResource("5")
+disabled = true
 text = "Save"
 flat = true
 icon_alignment = 1

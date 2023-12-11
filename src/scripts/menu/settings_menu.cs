@@ -11,9 +11,13 @@ public partial class settings_menu : Control
     private Button save_button;
     private Button close_button;
 
+    private AudioStreamWav sample_menubuttononclick_sfx;
+
     public override void _Ready()
     {
         settingsmenu_controlnode = GetNode<Control>(".");
+
+        sample_menubuttononclick_sfx = (AudioStreamWav)GD.Load("res://src/audio/sfx/main_menu/menubuttonclick_01.wav");
 
         masteraudiovol_slider = GetNode<HSlider>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Master_Audio_Level/HSlider");
         musicvol_slider = GetNode<HSlider>("MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/Music_Audio_Level/HSlider");
@@ -36,13 +40,17 @@ public partial class settings_menu : Control
 
     public void GetUserInput()
     {
+        var audiostrmplay = new audiostrmplay();
+
         if(close_button.ButtonPressed == true)
         {
+            audiostrmplay.PlayAudio(settingsmenu_controlnode, sample_menubuttononclick_sfx, "SFX");
             settingsmenu_controlnode.Hide();
         }
 
-        if(save_button.ButtonPressed == false)
+        if(save_button.ButtonPressed == true)
         {
+            audiostrmplay.PlayAudio(settingsmenu_controlnode, sample_menubuttononclick_sfx, "SFX");
             // Call custom save_settings method
         }
     }
