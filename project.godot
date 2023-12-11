@@ -113,3 +113,4 @@ environment/screen_space_reflection/roughness_quality=3
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
 environment/defaults/default_environment="res://default_env.tres"
 2d/fullsize=false
+environment/threads/thread_model=1

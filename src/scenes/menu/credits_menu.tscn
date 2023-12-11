@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://mdqei1l5tos1"]
+[gd_scene load_steps=8 format=3 uid="uid://mdqei1l5tos1"]
 
 [ext_resource type="Texture2D" uid="uid://wbbmqme821fo" path="res://src/misc/theme-art/export/Theme_Art_02-export.png" id="1_bhftu"]
 [ext_resource type="Script" path="res://src/scripts/menu/credits_menu.cs" id="1_lkulp"]
@@ -10,18 +10,6 @@
 shader = ExtResource("2_jb15s")
 shader_parameter/radius = 5.0
 shader_parameter/modulate = null
-
-[sub_resource type="FontFile" id="3"]
-fallbacks = Array[Font]([ExtResource("4_gx805")])
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [sub_resource type="FontFile" id="FontFile_aq0tb"]
 fallbacks = Array[Font]([ExtResource("4_gx805")])
@@ -81,21 +69,23 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 50
 
-[node name="Credits0" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
+[node name="Pa1yn" type="LinkButton" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_fonts/font = SubResource("3")
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
+theme_override_fonts/font = ExtResource("4_gx805")
 text = "Programming, level design and art - Peter Hamilton (Pa1yn)"
-horizontal_alignment = 1
+underline = 1
+uri = "https://github.com/Pa1yn-dev"
 
-[node name="Credits1" type="Label" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
+[node name="ThatOneOcelot" type="LinkButton" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_fonts/font = SubResource("3")
-text = "Sound design - Reuben Blair "
-horizontal_alignment = 1
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.282353)
+theme_override_fonts/font = ExtResource("4_gx805")
+text = "Sound design, art - Reuben Blair (ThatOneOcelot)"
+underline = 1
+uri = "https://soundcloud.com/thatoneocelot"
 
 [node name="Close" type="Button" parent="MarginContainer/CenterContainer/HBoxContainer/VBoxContainer/VBoxContainer2"]
 layout_mode = 2
